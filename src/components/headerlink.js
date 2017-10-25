@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../header.css';
 
 export default class LinkHeader extends Component {
@@ -13,8 +14,8 @@ export default class LinkHeader extends Component {
               <ul className="main-menu">
                 <li><a href="#">Menu</a>
                   <ul className="sub-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="LogIn.html">Log In</a></li>
+                    <li><Link to="/home">Home</Link></li>
+                    <li><Link to='/login'>Log In</Link></li>
                   </ul>
                 </li>
               </ul>
