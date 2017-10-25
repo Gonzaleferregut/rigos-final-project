@@ -16,6 +16,7 @@ export default class Home extends Component {
                 <Carousel />
                 <div className="sticky-contain">
                     <Sticky1 />
+                    <Sticky2 />
                     <Sticky3 />
                 </div>
                 <Services />
