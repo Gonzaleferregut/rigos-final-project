@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../header.css';
 
 
@@ -15,7 +16,7 @@ export default class Header extends Component {
                 <li><a href="#">Menu</a>
                   <ul className="sub-menu">
                     <li><a href="#">Register</a></li>
-                    <li><a href="LogIn.html">Log In</a></li>
+                    <li><Link to='/login'>Log In</Link></li>
                   </ul>
                 </li>
               </ul>

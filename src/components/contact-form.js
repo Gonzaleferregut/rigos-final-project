@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../form.css';
 import Sticky4 from './sticky4';
+import '../form.css';
 
 export default class Contact extends Component {
   render() {

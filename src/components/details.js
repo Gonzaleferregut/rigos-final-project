@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
+import Reading from './reading';
+import Math from './math';
+import Writting from './writting';
+import Homework from './homework-help';
+import '../detail-subjects.css';
 
 export default class Details extends Component {
   render() {
     return(
       <div className="details">
-        <p className="reading">This is text about our reading program</p>
-        <p className="math">Math</p>
-        <p className="writting">Writting</p>
-        <p className="homework-help">homework-help</p>
+        <Reading />
+        <Math />
+        <Writting/>
+        <Homework />
       </div>
     )
   }
