@@ -1,0 +1,47 @@
+a {
+  color: blue;
+  text-decoration: none;
+}
+.sticky-contain {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px;
+}
+.sticky {
+  height: auto;
+  width: 15%;
+  background-color: pink;
+}
+.sticky > a {
+  font-family: cursive;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  padding: 2px;
+}
+.sticky3 > p {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+}
+.sticky-top {
+  background-color: lightyellow;
+  opacity: .2;
+  height: 15px;
+}
+.sticky1 {
+  transform: rotate(-5deg);
+  box-shadow: -1px 3px 10px gray;
+}
+.sticky2 {
+  box-shadow: 0 3px 10px gray;
+}
+.sticky3 {
+  transform: rotate(5deg);
+  box-shadow: 1px 3px 10px gray;
+}
+ol li {
+  position: relative;
+  bottom: 5px;
+}

@@ -1,0 +1,12 @@
+.img {
+  display: flex;
+}
+.images {
+  border: 2px black solid;
+  border-radius: 50px;
+  width: 113px;
+  height: 91px;
+  padding: 2px;
+  background-color: skyblue;
+  margin: 10px auto;
+}

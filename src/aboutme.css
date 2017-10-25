@@ -1,0 +1,9 @@
+.about_me > h1 {
+  display: flex;
+  justify-content: center;
+}
+.about_me {
+  width: 50%;
+  margin: 0 auto;
+  padding: 15px;
+}

@@ -1,0 +1,53 @@
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: lightgreen;
+  border-radius: 5px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+
+.service_contact {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Tips and tricks and help styles below */
+
+.heading {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 75%;
+  margin: 0 auto;
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 2px black solid;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.tips_tricks {
+  background-color: #84CEED;
+  width: 75%;
+  margin: 0 auto;
+  padding: 5px;
+  border-right: 2px black solid;
+  border-bottom: 2px black solid;
+  border-left: 2px black solid;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.sticky-containP2 {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 10px;
+}

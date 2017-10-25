@@ -1,0 +1,44 @@
+header {
+  background-color: skyblue;
+  border: 2px black solid;
+  border-radius: 5px;
+}
+.img_title {
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  align-self: center;
+}
+nav {
+  display: flex;
+  align-self: flex-end;
+}
+.main-menu {
+  margin-right: 15px;
+}
+.main-menu a {
+  color: black;
+  text-decoration: none;
+}
+.main-menu li, .sub-menu li {
+  list-style: none;
+}
+.main-menu li:hover .sub-menu {
+  display: block;
+}
+.sub-menu a {
+  color: blue;
+}
+.sub-menu a:hover {
+  color: red;
+}
+.sub-menu {
+  display: none;
+  margin: 0;
+  position: absolute;
+  border: 2px black solid;
+  border-radius: 5%;
+  background-color: white;
+  padding: 10px;
+}
