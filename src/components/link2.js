@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LinkHeader from './headerlink';
 import Carousel from './carousel';
+import '../link2.css'
 
 export default class Link2 extends Component {
   render() {
@@ -8,6 +9,14 @@ export default class Link2 extends Component {
       <div className="container">
         <LinkHeader />
         <Carousel />
+        <div className="info-contain">
+          <div className="info">
+          <h2>Student Tips and tricks!</h2>
+            <p>
+            kjniernfijenfae ebfuaenfunfueaf aefjiaeijfnjanfneafnaef aefheanfinngng aejigbiaernfuaberigubaeiugbae gaenaoenfoaenfonaef a kjfnaijfn aehfaejnfaf afhaoufouahfa faofhuahfuhaf wejfhauf fabsfb
+            </p>
+          </div>
+        </div>
       </div>
     )
   }

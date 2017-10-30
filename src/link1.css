@@ -1,0 +1,21 @@
+.info-contain {
+  display: flex;
+  justify-content: center;
+}
+.info-contain h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5px 0;
+  font-family: cursive;
+  color: blue;
+}
+.info {
+  width: 65%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+}
+.info > p {
+  margin: 0;
+}

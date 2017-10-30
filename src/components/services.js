@@ -5,6 +5,13 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import '../services.css'
 
 export default class Services extends Component {
+  constructor() {
+    super()
+    this.state = {
+      Reading : Reading
+    }
+  }
+
 
   render() {
     return (
@@ -16,10 +23,10 @@ export default class Services extends Component {
           <BrowserRouter>
             <div>
               <div className="subjects">
-                <Link to="/reading">Reading</Link>
+                <Link to="/reading" onClick={Reading}>Reading</Link>
                 <Link to='/math'>Math</Link>
                 <Link to='/writing'>Writing</Link>
-                <Link to='/homework-help'>Homework</Link>
+                <Link to='/homework-help'>homework-help</Link>
               </div>
               <Route path="/reading" component={Reading} />
               <Route path="/math" component={Math} />
@@ -36,9 +43,9 @@ export default class Services extends Component {
 }
 
 const Reading = () => (
-  <div className="details">
-    <p>Maybe a conditional statement if reading is clicked display: none for the rest, else display: none for reading!</p>
-  </div>
+    <div className="details">
+      <p>Reading is fun!!</p>
+    </div>
 )
 
 const Math = () => (
