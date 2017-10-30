@@ -16,6 +16,11 @@
   display: flex;
   flex-direction: column;
 }
+.subjects > p {
+  margin: 10px;
+  color: blue;
+  font-size: 1.4em;
+}
 .subjects > a {
   font-size: 23px;
   padding: 10px;
