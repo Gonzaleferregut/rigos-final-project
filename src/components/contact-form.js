@@ -9,18 +9,18 @@ export default class Contact extends Component {
         <div className="top-panel">
           <h2>Contact Me</h2>
         </div>
-        <form autoComplete="on" action="MAILTO:rigoberto.gonzaleferregut@yahoo.com" method="post" enctype="text/plain">
+        <form autoComplete="on" action="MAILTO:rigoberto.gonzaleferregut@yahoo.com" method="post" encType="text/plain">
           <div className="form">
-            <label for="fullname">Full Name:</label>
+            <label htmlFor="fullname">Full Name:</label>
             <input id="fullname" type="text" name="FullName" required/>
 
-            <label for="email">Email:</label>
+            <label htmlFor="email">Email:</label>
             <input id="email" type="email" name="Email" required/>
 
-            <label for="phone#">Phone Number:</label>
+            <label htmlFor="phone#">Phone Number:</label>
             <input id="phone#" type="number" name="Phone"/>
 
-            <label for="interest">Interest:</label>
+            <label htmlFor="interest">Interest:</label>
             <select id="interest" name="Interest">
               <option value="Reading" defaultValue>Reading</option>
               <option value="Math">Math</option>
