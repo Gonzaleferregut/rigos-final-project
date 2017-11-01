@@ -14,7 +14,7 @@ export default class Services extends Component {
   constructor() {
     super()
     this.state = {
-      message: 'All your base are belong to us!'
+      message: 'U mad Bro'
     }
   }
 
