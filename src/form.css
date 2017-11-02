@@ -3,7 +3,6 @@
   flex-direction: column;
   margin: 10px;
   border-radius: 5px;
-  padding-top: 15px;
 }
 .top-panel {
   border-bottom: 1px solid black;
@@ -12,9 +11,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.form input {
-  margin-bottom: 10px;
 }
 .btn {
   margin-top: 20px;

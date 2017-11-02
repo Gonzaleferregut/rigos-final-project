@@ -2,14 +2,41 @@ import React, { Component } from 'react';
 import About from './about-me.js';
 import Contact from './contact-form';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { List, ListItem } from 'material-ui/List';
+import ContentCreate from 'material-ui/svg-icons/content/create';
+import LibraryBooks from 'material-ui/svg-icons/av/library-books';
+import ActionAssignment from 'material-ui/svg-icons/action/assignment';
+import ContentAddBox from 'material-ui/svg-icons/content/add-box';
+
 import '../services.css'
 
 export default class Services extends Component {
   constructor() {
     super()
     this.state = {
-      Reading : Reading
+      message: 'U mad Bro'
     }
+  }
+
+  handleClick(type) {
+    let chosenType
+    switch (type) {
+      case 'read':
+        chosenType = 'Reading is fun!!'
+        break
+      case 'write':
+        chosenType = 'Writing is fun!!'
+        break
+      case 'math':
+        chosenType = 'Math is fun!!'
+        break
+      case 'homework':
+        chosenType = 'Homework is fun!!'
+        break
+    }
+    this.setState({
+        message: chosenType
+    })
   }
 
 
@@ -23,15 +50,20 @@ export default class Services extends Component {
           <BrowserRouter>
             <div>
               <div className="subjects">
-                <Link to="/reading" onClick={Reading}>Reading</Link>
-                <Link to='/math'>Math</Link>
-                <Link to='/writing'>Writing</Link>
-                <Link to='/homework-help'>homework-help</Link>
+                <List>
+                  <ListItem primaryText="Reading" leftIcon={<LibraryBooks />}
+                    onClick={() => this.handleClick('read')} />
+                  <ListItem primaryText="Writing" leftIcon={<ContentCreate />}
+                    onClick={() => this.handleClick('write')} />
+                  <ListItem primaryText="Math" leftIcon={<ContentAddBox />}
+                    onClick={() => this.handleClick('math')} />
+                  <ListItem primaryText="Homework" leftIcon={<ActionAssignment />}
+                    onClick={() => this.handleClick('homework')} />
+                </List>
               </div>
-              <Route path="/reading" component={Reading} />
-              <Route path="/math" component={Math} />
-              <Route path="/writing" component={Writing} />
-              <Route path="/homework-help" component={Homework} />
+              <div className="details">
+                <p>{this.state.message}</p>
+              </div>
             </div>
           </BrowserRouter>
         </section>
@@ -41,27 +73,3 @@ export default class Services extends Component {
     )
   }
 }
-
-const Reading = () => (
-    <div className="details">
-      <p>Reading is fun!!</p>
-    </div>
-)
-
-const Math = () => (
-  <div className="details">
-    <p>Math is fun!!</p>
-  </div>
-)
-
-const Writing = () => (
-  <div className="details">
-    <p>Writing is fun!!</p>
-  </div>
-)
-
-const Homework = () => (
-  <div className="details">
-    <p>Homework is fun!!</p>
-  </div>
-)
