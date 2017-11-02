@@ -1,8 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  border-radius: 5px;
+  margin: 0 5px;
 }
 .top-panel {
   border-bottom: 1px solid black;
@@ -13,12 +12,9 @@
   align-items: center;
 }
 .btn {
-  margin-top: 20px;
   display: flex;
   justify-content: space-around;
 }
-
-/*when submit is clicked it resets the form*/
 .submit {
   width: 50%;
   margin-right: 5px;
@@ -30,14 +26,18 @@
   display: flex;
   justify-content: center;
 }
+.CEP {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
 .contacts-sticky-top {
   background-color: lightyellow;
   opacity: .2;
-  height: 20px;
+  height: 15px;
 }
 .contact-sticky {
-  height: 165px;
-  width: 165px;
+  height: auto;
+  width: 90%;
   background-color: pink;
   box-shadow: 0 5px 20px black;
 }

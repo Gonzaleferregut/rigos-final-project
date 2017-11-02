@@ -14,7 +14,7 @@ export default class Services extends Component {
   constructor() {
     super()
     this.state = {
-      message: 'U mad Bro'
+      message: 'Click Above for More Info!'
     }
   }
 
@@ -22,7 +22,7 @@ export default class Services extends Component {
     let chosenType
     switch (type) {
       case 'read':
-        chosenType = 'Reading is fun!!'
+        chosenType = 'Reading is fun asjdnasjndjasndjasnj hiue FUWFUWE ffu UHF Udhfushdf ushf ushfuihsduf usd fushfushfu s u dfhuds fiusdhfiuhd F f ddUFHdiuhf u'
         break
       case 'write':
         chosenType = 'Writing is fun!!'
