@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LinkHeader from './headerlink';
-import Home from './home';
+
 import Carousel from './carousel';
 import '../link1.css'
 
@@ -14,7 +14,7 @@ export default class Link1 extends Component {
           <div className="info">
           <h2>How you can help!</h2>
             <p>
-            kjniernfijenfae ebfuaenfunfueaf aefjiaeijfnjanfneafnaef aefheanfinngng aejigbiaernfuaberigubaeiugbae gaenaoenfoaenfonaef a kjfnaijfn aehfaejnfaf afhaoufouahfa faofhuahfuhaf wejfhauf fabsfb
+            Hi and welcome! My name is Nora, I am a wife, mother, and educator. I have a bachelors degree in elementary education and I am certified in Arizona, Texas, and Florida. I have a masters in educational leadership. In the past eight years, I have taught kindergarten, third, fourth, fifth,and sixth grade. I enjoy working with children and my goal is to help all children reach their max potential.
             </p>
           </div>
         </div>

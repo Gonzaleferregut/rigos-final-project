@@ -23,7 +23,7 @@ const styles = {
     margin: 12
   },
   dialogButtonMargin: {
-    margin: 12
+    margin: 5
   },
   buttonColor: {
     color: lightBlue200,
@@ -107,7 +107,6 @@ export default class Contact extends Component {
             <TextField name="fullName" required type="text"   floatingLabelText="Full Name:"
               floatingLabelFixed = "true"
               onChange={this.handleTextChange}
-              errorStyle={styles.errorStyle}
               floatingLabelStyle={styles.floatingLabelStyle}
               floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
               inputStyle={hideAutoFillColorStyle} />
@@ -115,7 +114,6 @@ export default class Contact extends Component {
             <TextField name="email" required floatingLabelText="Email:" type="email"
               floatingLabelFixed = "true"
               onChange={this.handleTextChange}
-              errorStyle={styles.errorStyle}
               floatingLabelStyle={styles.floatingLabelStyle}
               floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
               inputStyle={hideAutoFillColorStyle} />
@@ -123,7 +121,6 @@ export default class Contact extends Component {
             <TextField name="phone" required floatingLabelText="Phone Number" type="number"
               floatingLabelFixed = "true"
               onChange={this.handleTextChange}
-              errorStyle={styles.errorStyle}
               floatingLabelStyle={styles.floatingLabelStyle}
               floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
               inputStyle={hideAutoFillColorStyle} />
