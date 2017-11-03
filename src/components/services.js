@@ -22,16 +22,16 @@ export default class Services extends Component {
     let chosenType
     switch (type) {
       case 'read':
-        chosenType = 'Reading is fun asjdnasjndjasndjasnj hiue FUWFUWE ffu UHF Udhfushdf ushf ushfuihsduf usd fushfushfu s u dfhuds fiusdhfiuhd F f ddUFHdiuhf u'
+        chosenType = 'Hi and welcome! My name is Nora, I am a wife, mother, and educator. I have a bachelors degree in elementary education and I am certified in Arizona, Texas, and Florida. I have a masters in educational leadership. In the past eight years, I have taught kindergarten, third, fourth, fifth,and sixth grade. I enjoy working with children and my goal is to help all children reach their max potential.'
         break
       case 'write':
-        chosenType = 'Writing is fun!!'
+        chosenType = 'Hi and welcome! My name is Nora, I am a wife, mother, and educator. I have a bachelors degree in elementary education and I am certified in Arizona, Texas, and Florida. I have a masters in educational leadership. In the past eight years, I have taught kindergarten, third, fourth, fifth,and sixth grade. I enjoy working with children and my goal is to help all children reach their max potential.'
         break
       case 'math':
-        chosenType = 'Math is fun!!'
+        chosenType = 'Hi and welcome! My name is Nora, I am a wife, mother, and educator. I have a bachelors degree in elementary education and I am certified in Arizona, Texas, and Florida. I have a masters in educational leadership.  children reach their max potential.'
         break
       case 'homework':
-        chosenType = 'Homework is fun!!'
+        chosenType = 'Hi and welcome! My name is Nora, I am a wife, mother, and educatoon and I am certified in Arizona, Texas, and Florida. I have a masters in educational leadership. In the past eight years, I have taught kindergarten, third, fourth, fifth,and sixth grade. I enjoy working with children and my goal is to help all children reach their max potential.'
         break
     }
     this.setState({

@@ -3,6 +3,7 @@ import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
+import Dialog from 'material-ui/Dialog';
 import { red500, black800, white, lightBlue200 } from 'material-ui/styles/colors';
 import axios from 'axios';
 import Sticky4 from './sticky4';
@@ -21,10 +22,17 @@ const styles = {
   buttonMargin: {
     margin: 12
   },
+  dialogButtonMargin: {
+    margin: 12
+  },
   buttonColor: {
     color: lightBlue200,
   }
 }
+
+const hideAutoFillColorStyle = {
+  WebkitBoxShadow: '0 0 0 1000px skyblue inset'
+};
 
 export default class Contact extends Component {
   constructor(props) {
@@ -67,7 +75,28 @@ export default class Contact extends Component {
   });
   }
 
+  state = {
+    open: false,
+  };
+
+  handleOpen = () => {
+    this.setState({open: true});
+  };
+
+  handleClose = () => {
+    this.setState({open: false});
+  };
+
   render() {
+    const actions = [
+      <RaisedButton
+        label="Close"
+        primary={true}
+        onClick={this.handleClose}
+        style={styles.dialogButtonMargin}
+      />
+    ];
+
     return(
       <section className="contact-form">
         <div className="top-panel">
@@ -75,23 +104,29 @@ export default class Contact extends Component {
         </div>
         <form autoComplete="on" onSubmit={this.handleSubmit} >
           <div className="form">
-            <TextField name="fullName" required type="text" floatingLabelText="Full Name:"
-            onChange={this.handleTextChange}
+            <TextField name="fullName" required type="text"   floatingLabelText="Full Name:"
+              floatingLabelFixed = "true"
+              onChange={this.handleTextChange}
               errorStyle={styles.errorStyle}
               floatingLabelStyle={styles.floatingLabelStyle}
-              floatingLabelFocusStyle={styles.floatingLabelFocusStyle}/>
+              floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
+              inputStyle={hideAutoFillColorStyle} />
 
             <TextField name="email" required floatingLabelText="Email:" type="email"
+              floatingLabelFixed = "true"
               onChange={this.handleTextChange}
               errorStyle={styles.errorStyle}
               floatingLabelStyle={styles.floatingLabelStyle}
-              floatingLabelFocusStyle={styles.floatingLabelFocusStyle}/>
+              floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
+              inputStyle={hideAutoFillColorStyle} />
 
             <TextField name="phone" required floatingLabelText="Phone Number" type="number"
+              floatingLabelFixed = "true"
               onChange={this.handleTextChange}
               errorStyle={styles.errorStyle}
               floatingLabelStyle={styles.floatingLabelStyle}
-              floatingLabelFocusStyle={styles.floatingLabelFocusStyle}/>
+              floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
+              inputStyle={hideAutoFillColorStyle} />
 
             <SelectField onChange={this.handleSelectChange}
               floatingLabelText="Interest"
@@ -104,9 +139,17 @@ export default class Contact extends Component {
             </SelectField>
 
             <div className="btn">
-              <RaisedButton label="Submit" type="submit"style={{...styles.buttonMargin,...styles.buttonColor}} />
+              <RaisedButton label="Submit" type="submit"style={{...styles.buttonMargin,...styles.buttonColor}} onClick={this.handleOpen}/>
               <RaisedButton label="Reset" type="reset" style={styles.buttonMargin} />
             </div>
+            <Dialog
+              title="Thank You for you request"
+              actions={actions}
+              modal={false}
+              open={this.state.open}
+              onRequestClose={this.handleClose}>
+              I will be sure to reach out to you shortly.
+            </Dialog>
           </div>
         </form>
         <div className="info-sticky">
