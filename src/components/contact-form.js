@@ -4,6 +4,7 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import { red500, black800, white, lightBlue200 } from 'material-ui/styles/colors';
+import axios from 'axios';
 import Sticky4 from './sticky4';
 import '../form.css';
 
@@ -57,6 +58,13 @@ export default class Contact extends Component {
   handleSubmit(event) {
     event.preventDefault()
     console.log(this.state)
+    axios.post('http://localhost:4000/contact', this.state)
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
   }
 
   render() {
