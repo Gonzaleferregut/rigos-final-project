@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import About from './about-me.js';
-import Contact from './contact-form';
+import Contact from './CreateContact';
+// import Contact from './contact-form';
 import { BrowserRouter } from 'react-router-dom';
 import { List, ListItem } from 'material-ui/List';
 import ContentCreate from 'material-ui/svg-icons/content/create';
