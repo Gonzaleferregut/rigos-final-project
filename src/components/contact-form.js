@@ -66,7 +66,7 @@ export default class Contact extends Component {
   handleSubmit(event) {
     event.preventDefault()
     console.log(this.state)
-    axios.post('http://localhost:4000/contact', this.state)
+    axios.post('https://api.graph.cool/simple/v1/cj9lnrsa36s7t0121n906lvfa', this.state)
   .then(function (response) {
     console.log(response);
   })
