@@ -163,7 +163,7 @@ class CreateContact extends Component {
                             open={this.state.open}
                             onRequestClose={this.handleClose}>
                             I will be sure to reach out to you shortly.
-            </Dialog>
+                        </Dialog>
                     </div>
                 </form>
                 <div className="info-sticky">

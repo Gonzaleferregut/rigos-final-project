@@ -15,7 +15,7 @@ export default class Header extends Component {
               <ul className="main-menu">
                 <li><a href="#">Menu</a>
                   <ul className="sub-menu">
-                    <li><a href="#">Register</a></li>
+                    <li><Link to='/createUser'>Sign up</Link></li>
                     <li><Link to='/login'>Log In</Link></li>
                   </ul>
                 </li>

@@ -18,7 +18,7 @@ export default class Home extends Component {
           <Sticky1 />
           <Sticky2 />
           <Sticky3 />
-          </div>
+        </div>
         <Services />
         <Quote />
         <Footer />
