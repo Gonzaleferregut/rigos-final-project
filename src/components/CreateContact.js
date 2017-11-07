@@ -88,7 +88,7 @@ class CreateContact extends Component {
             this.handleOpen()
         } catch (error) {
             console.log(error)
-        }    
+        }
     }
 
     state = {
@@ -106,12 +106,12 @@ class CreateContact extends Component {
 
     render() {
         const actions = [
-            <RaisedButton
-                label="Close"
-                primary={true}
-                onClick={this.handleClose}
-                style={styles.dialogButtonMargin}
-            />
+          <RaisedButton
+            label="Close"
+            primary={true}
+            onClick={this.handleClose}
+            style={styles.dialogButtonMargin}
+          />
         ];
 
         return (
