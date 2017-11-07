@@ -60,15 +60,15 @@ class CreateContact extends Component {
     }
 
     handleSelectChange(key) {
-        this.setState({
-            interest: key.toString()
-        })
+      this.setState({
+          interest: key.toString()
+      })
     }
 
     handleSubmit(event) {
-        event.preventDefault()
-        console.log(this.state)
-        this._createContact()
+      event.preventDefault()
+      console.log(this.state)
+      this._createContact()
     }
 
     _createContact = async () => {
@@ -92,26 +92,26 @@ class CreateContact extends Component {
     }
 
     state = {
-        open: false,
+      open: false,
     };
 
     handleOpen = () => {
-        this.setState({ open: true });
+      this.setState({ open: true });
     };
 
     handleClose = () => {
-        this.setState({ open: false });
-        document.querySelector("form").reset(); // empty out the form after the dialog closes
+      this.setState({ open: false });
+      document.querySelector("form").reset(); // empty out the form after the dialog closes
     };
 
     render() {
         const actions = [
-          <RaisedButton
-            label="Close"
-            primary={true}
-            onClick={this.handleClose}
-            style={styles.dialogButtonMargin}
-          />
+            <RaisedButton
+              label="Close"
+              primary={true}
+              onClick={this.handleClose}
+              style={styles.dialogButtonMargin}
+            />
         ];
 
         return (
