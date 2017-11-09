@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { black800 } from 'material-ui/styles/colors';
-import axios from 'axios'
 import '../paymentForm.css'
 
 const styles = {
@@ -45,13 +44,6 @@ export default class Payment extends Component {
   handleSubmit(event) {
     event.preventDefault()
     console.log(this.state)
-    axios.post('https://api.graph.cool/simple/v1/cj9lnrsa36s7t0121n906lvfa', this.state)
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
   }
 
   render() {
@@ -84,7 +76,7 @@ export default class Payment extends Component {
                 <option value="december">December</option>
               </select>
               <select className="expYear"
-              onChange={this.handleSelectChange}>
+                onChange={this.handleSelectChange}>
                 <option>2025</option>
                 <option>2024</option>
                 <option>2023</option>
