@@ -1,0 +1,27 @@
+.message-contain {
+  height: 200px;
+  width: 50%;
+  background-color: white;
+  margin: 5px auto;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.inputs {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+.inputField {
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.post-btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: skyblue;
+}

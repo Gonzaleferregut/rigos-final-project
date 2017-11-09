@@ -1,0 +1,16 @@
+.blackBoard {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+}
+.blackBoard p {
+  margin: 0;
+}
+.blackBoard p > a {
+  color: blue;
+  text-decoration: none;
+}
+.blackBoard p > a:hover {
+  color: red;
+}

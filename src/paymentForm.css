@@ -1,0 +1,37 @@
+.payment-tab-contain {
+  display: flex;
+  justify-content: center;
+}
+.payment-contain {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 15px;
+  background-color: skyblue;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+}
+form {
+  margin: 5px;
+}
+.form {
+  display: flex;
+  justify-content: center;
+}
+.input {
+  display: flex;
+  margin: 5px;
+  width: 250px;
+}
+.expDate, .expYear {
+  margin: 5px;
+}
+.pay-btn-contain {
+  display: flex;
+  justify-content: flex-end;
+}
+.pay-btn {
+  margin: 5px;
+}

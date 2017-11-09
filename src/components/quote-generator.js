@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import '../quote.css';
+import React, { Component } from 'react'
+import '../quote.css'
 
 export default class Quote extends Component {
   render() {

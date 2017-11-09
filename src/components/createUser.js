@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
-import Dialog from 'material-ui/Dialog';
-import { red500, black800, white, lightBlue200 } from 'material-ui/styles/colors';
-import '../logIn.css';
+import React, { Component } from 'react'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import TextField from 'material-ui/TextField'
+import RaisedButton from 'material-ui/RaisedButton'
+import Dialog from 'material-ui/Dialog'
+import { red500, black800, white, lightBlue200 } from 'material-ui/styles/colors'
+import '../logIn.css'
 
 const styles = {
     errorStyle: {

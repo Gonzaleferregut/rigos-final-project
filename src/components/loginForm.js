@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TextField from 'material-ui/TextField';
-import '../logIn.css';
+import React, { Component } from 'react'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import TextField from 'material-ui/TextField'
+import '../logIn.css'
 
 const hideAutoFillColorStyle = {
   WebkitBoxShadow: '0 0 0 1000px white inset'

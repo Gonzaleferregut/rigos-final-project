@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import About from './about-me.js';
-import Contact from './CreateContact';
-// import Contact from './contact-form';
-import { BrowserRouter } from 'react-router-dom';
-import { List, ListItem } from 'material-ui/List';
-import ContentCreate from 'material-ui/svg-icons/content/create';
-import LibraryBooks from 'material-ui/svg-icons/av/library-books';
-import ActionAssignment from 'material-ui/svg-icons/action/assignment';
-import ContentAddBox from 'material-ui/svg-icons/content/add-box';
+import React, { Component } from 'react'
+import About from './about-me.js'
+import Contact from './CreateContact'
+import { BrowserRouter } from 'react-router-dom'
+import { List, ListItem } from 'material-ui/List'
+import ContentCreate from 'material-ui/svg-icons/content/create'
+import LibraryBooks from 'material-ui/svg-icons/av/library-books'
+import ActionAssignment from 'material-ui/svg-icons/action/assignment'
+import ContentAddBox from 'material-ui/svg-icons/content/add-box'
 import '../services.css'
 
 export default class Services extends Component {

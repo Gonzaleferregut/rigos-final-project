@@ -1,0 +1,11 @@
+.personal-form {
+  padding: 10px;
+}
+.student-info {
+  display: flex;
+  flex-direction: row;
+}
+.BTN {
+  display: flex;
+  justify-content: flex-end;
+}

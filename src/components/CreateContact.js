@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-import TextField from 'material-ui/TextField';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
-import Dialog from 'material-ui/Dialog';
-import { red500, black800, white, lightBlue200 } from 'material-ui/styles/colors';
-import Sticky4 from './sticky4';
-import '../form.css';
+import TextField from 'material-ui/TextField'
+import SelectField from 'material-ui/SelectField'
+import MenuItem from 'material-ui/MenuItem'
+import RaisedButton from 'material-ui/RaisedButton'
+import Dialog from 'material-ui/Dialog'
+import { red500, black800, white, lightBlue200 } from 'material-ui/styles/colors'
+import Sticky4 from './sticky4'
+import '../form.css'
 
 const styles = {
   errorStyle: {

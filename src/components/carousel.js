@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import '../carousel.css';
+import React, { Component } from 'react'
+import '../carousel.css'
 
 export default class Carousel extends Component {
     render() {

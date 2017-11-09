@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import LinkHeader from './headerlink';
-
-import Carousel from './carousel';
+import React, { Component } from 'react'
+import LinkHeader from './headerlink'
+import Carousel from './carousel'
 import '../link1.css'
 
 export default class Link1 extends Component {
