@@ -21,23 +21,22 @@ export default class Services extends Component {
     let chosenType
     switch (type) {
       case 'read':
-        chosenType = 'Hi and welcome! My name is Nora, I am a wife, mother, and educator. I have a bachelors degree in elementary education and I am certified in Arizona, Texas, and Florida. I have a masters in educational leadership. In the past eight years, I have taught kindergarten, third, fourth, fifth,and sixth grade. I enjoy working with children and my goal is to help all children reach their max potential.'
+        chosenType = "In our reading program, struggling readers get individualized support in all areas, focusing on their area of weakness. We focus on Phonemic Awareness, Word Study, Phonics Fluency, Vocabulary, Comprehension. Placement assessment. Individualized learning pathways. One-on-One tutoring. Quarterly benchmark assessments to determine growth and new areas of focus."
         break
       case 'write':
-        chosenType = 'Hi and welcome! My name is Nora, I am a wife, mother, and educator. I have a bachelors degree in elementary education and I am certified in Arizona, Texas, and Florida. I have a masters in educational leadership. In the past eight years, I have taught kindergarten, third, fourth, fifth,and sixth grade. I enjoy working with children and my goal is to help all children reach their max potential.'
+        chosenType = 'Writing can be challenging for students. Here, at Elementary Tutor, we teach the student learn to write from the very beginning. Breaking everything down into smaller parts. Mastering one part at a time is very beneficial to having them write essays accurately.'
         break
       case 'math':
-        chosenType = 'Hi and welcome! My name is Nora, I am a wife, mother, and educator. I have a bachelors degree in elementary education and I am certified in Arizona, Texas, and Florida. I have a masters in educational leadership.  children reach their max potential.'
+        chosenType = 'Our math program, struggling students get individualized support in all areas, focusing on their grade level content. Placement assessment. Individualized learning pathways. One-on-One tutoring. Quarterly benchmark assessments to determine growth and new areas of focus.'
         break
       case 'homework':
-        chosenType = 'Hi and welcome! My name is Nora, I am a wife, mother, and educatoon and I am certified in Arizona, Texas, and Florida. I have a masters in educational leadership. In the past eight years, I have taught kindergarten, third, fourth, fifth,and sixth grade. I enjoy working with children and my goal is to help all children reach their max potential.'
+        chosenType = "Homework is a daily routine for many students. However, many students struggle to complete work at home that they didn't finish at school because they simply don't understand. Here at Elementary Tutor, that is no problem, we can help with any type of homework assignment."
         break
     }
     this.setState({
         message: chosenType
     })
   }
-
 
   render() {
     return (

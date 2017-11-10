@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import loginHeader from './components/login-header'
+import LoginHeader from './components/login-header'
 import Main from './components/tabs'
 import Quote from './components/quote-generator'
 import Footer from './components/footer'
@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       <MuiThemeProvider>
       <div className="container">
-        <loginHeader />
+        <LoginHeader />
         <Main />
         <Quote />
         <Footer />

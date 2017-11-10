@@ -21,10 +21,10 @@ const styles = {
       color: white,
   },
   buttonMargin: {
-      margin: 12
+      margin: 12,
   },
   dialogButtonMargin: {
-      margin: 5
+      margin: 5,
   },
   buttonColor: {
       color: lightBlue200,
@@ -121,27 +121,29 @@ class CreateContact extends Component {
         </div>
         <form autoComplete="on" onSubmit={this.handleSubmit} >
           <div className="form">
-            <TextField name="fullName" required type="text"floatingLabelText="Full Name:"
+            <TextField name="fullName" required type="text"
+            floatingLabelText="Full Name:"
             floatingLabelFixed
             onChange={this.handleTextChange}
             floatingLabelStyle={styles.floatingLabelStyle}
-            floatingLabelFocusStyle={styles.floatingLabelFocustyle}
+            floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
             inputStyle={hideAutoFillColorStyle}
             />
 
-            <TextField name="email" requiredfloatingLabelText="Email:" type="email"
+            <TextField name="email" required type="email"
+            floatingLabelText="Email:"
             floatingLabelFixed
-            onChange={this.handleTextChange}
-            floatingLabelStyle={styles.floatingLabelStyle}
-            floatingLabelFocusStyle={styles.floatingLabelFocustyle}
+            onChange={this.handleTextChange}  floatingLabelStyle={styles.floatingLabelStyle}
+            floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
             inputStyle={hideAutoFillColorStyle}
             />
 
-            <TextField name="phone" requiredfloatingLabelText="Phone Number" type="number"
+            <TextField name="phone" required type="number"
+            floatingLabelText="Phone Number"
             floatingLabelFixed
             onChange={this.handleTextChange}
             floatingLabelStyle={styles.floatingLabelStyle}
-            floatingLabelFocusStyle={styles.floatingLabelFocustyle}
+            floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
             inputStyle={hideAutoFillColorStyle}
             />
 
