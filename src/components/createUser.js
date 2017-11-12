@@ -38,27 +38,12 @@ class CreateUser extends Component {
     super(props)
     this.state = {
       email: '',
-      passWord: '',
-      name: "",
+      password: '',
+      name: '',
       open: false
     }
     this.handleTextChange = this.handleTextChange.bind(this)
-    // this.handleSubmit = this.handleSubmit.bind(this)
   }
-
-  handleTextChange(event) {
-    const name = event.target.name
-    const value = event.target.value
-    this.setState({
-      [name]: value // using ES6 computed property name
-    })
-  }
-
-  // handleSubmit(event) {
-  //   event.preventDefault()
-  //   console.log(this.state)
-  //   this._signupUser()
-  // }
 
   _signUpUser = async (event) => {
     event.preventDefault()
@@ -74,6 +59,14 @@ class CreateUser extends Component {
       console.error('An error occured: ', e)
       // this.props.history.push('/')
     }
+  }
+
+  handleTextChange(event) {
+    const name = event.target.name
+    const value = event.target.value
+    this.setState({
+      [name]: value // using ES6 computed property name
+    })
   }
 
   state = {

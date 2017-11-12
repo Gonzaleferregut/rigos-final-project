@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import LoginHeader from './components/login-header'
-import Main from './components/tabs'
-import Quote from './components/quote-generator'
-import Footer from './components/footer'
+import LoginHeader from './login-header'
+import Main from './tabs'
+import Quote from './quote-generator'
+import Footer from './footer'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import './app.css'
+import '../App.css'
 
-export default class App extends Component {
+export default class LoggedIn extends Component {
   render() {
     return (
       <MuiThemeProvider>
