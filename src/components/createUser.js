@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -31,7 +33,7 @@ const hideAutoFillColorStyle = {
   WebkitBoxShadow: '0 0 0 1000px white inset'
 };
 
-export default class CreateUser extends Component {
+class CreateUser extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -41,7 +43,7 @@ export default class CreateUser extends Component {
       open: false
     }
     this.handleTextChange = this.handleTextChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    // this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleTextChange(event) {
@@ -52,10 +54,26 @@ export default class CreateUser extends Component {
     })
   }
 
-  handleSubmit(event) {
-    event.preventDefault()
-    console.log(this.state)
+  // handleSubmit(event) {
+  //   event.preventDefault()
+  //   console.log(this.state)
+  //   this._signupUser()
+  // }
 
+  _signUpUser = async (event) => {
+    event.preventDefault()
+    const { email, password } = this.state
+    console.log(this.state)
+    try {
+      const response = await this.props.signupUserMutation({ variables: { email, password } })
+      localStorage.setItem('graphcoolToken', response.data.signupUser.token)
+      console.log(response.data)
+      document.querySelector('form').reset()
+      // this.props.history.push('/')
+    } catch (e) {
+      console.error('An error occured: ', e)
+      // this.props.history.push('/')
+    }
   }
 
   state = {
@@ -85,7 +103,7 @@ export default class CreateUser extends Component {
       <MuiThemeProvider>
         <div className="contain">
           <div className="logIn">
-            <form autoComplete="on" onSubmit={this.handleSubmit}>
+            <form autoComplete="on" onSubmit={this._signUpUser}>
               <TextField name="name"
               hintText="Please Enter Your Name"
               floatingLabelText="Name"
@@ -123,3 +141,14 @@ export default class CreateUser extends Component {
     )
   }
 }
+
+const SIGN_EMAIL_USER = gql`
+  mutation SignupUser($email: String!, $password: String!) {
+    signupUser(email: $email, password: $password) {
+      id
+      token
+    }
+  }
+`
+
+export default graphql(SIGN_EMAIL_USER, {name: 'signupUserMutation'})(CreateUser)

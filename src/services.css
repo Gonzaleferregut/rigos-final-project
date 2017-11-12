@@ -39,3 +39,14 @@
 .details>p {
   margin: 0;
 }
+
+@media only screen and (max-width: 400px) {
+  .service_contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .service_contact > section {
+    width: 100%;
+  }
+}

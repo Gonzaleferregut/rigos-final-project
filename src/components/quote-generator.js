@@ -4,7 +4,7 @@ import '../quote.css'
 export default class Quote extends Component {
   render() {
     return(
-      <div>
+      <div className="qqq">
         <hr />
         <div>
           <div className="quote">

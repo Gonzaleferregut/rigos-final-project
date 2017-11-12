@@ -7,3 +7,10 @@
   margin: 0 auto;
   padding: 15px;
 }
+
+@media only screen and (max-width: 400px) {
+  .about_me {
+    margin-left: 0;
+    width: 100%;
+  }
+}

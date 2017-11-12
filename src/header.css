@@ -26,6 +26,8 @@ nav {
 }
 .main-menu li:hover .sub-menu {
   display: block;
+  /*width: 100%;*/
+  /*left: 0;*/
 }
 .sub-menu a {
   color: blue;
@@ -41,4 +43,14 @@ nav {
   border-radius: 5%;
   background-color: white;
   padding: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  header {
+    width: 100%;
+    margin: 0;
+  }
+  h1 {
+    font-size: 18px;
+  }
 }

@@ -6,6 +6,7 @@ a {
   display: flex;
   justify-content: space-around;
   margin: 15px;
+  width: 100%;
 }
 .sticky {
   height: auto;
@@ -19,6 +20,10 @@ a {
   justify-content: center;
   margin-top: 5px;
   padding: 2px;
+  text-decoration: none;
+}
+.sticky > a:hover {
+  color: red;
 }
 .sticky3 > p {
   display: flex;
@@ -44,4 +49,31 @@ a {
 ol li {
   position: relative;
   bottom: 5px;
+}
+
+@media only screen and (max-width: 400px) {
+  .sticky-contain {
+    width: 320px;
+    justify-content: space-between;
+  }
+  .sticky {
+    width: 8em;
+    height: 7em;
+    margin: 4px;
+  }
+  ol li {
+    font-size: 10px;
+  }
+  ol {
+    position: relative;
+    right: 12px;
+  }
+  .sticky a {
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .sticky1, .sticky2, .sticky3 {
+    transform: rotate(0deg);
+    box-shadow: 0 3px 10px gray;
+  }
 }

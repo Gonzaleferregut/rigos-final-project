@@ -8,7 +8,7 @@
   margin: 15px auto;
 }
 
-@keyframes slider {
+/*@keyframes slider {
   0% {
     Left: 0;
   }
@@ -63,4 +63,15 @@
   text-align: left;
   font-size: 0;
   animation: 30s slider infinite;
+}*/
+
+@media only screen and (max-width: 400px) {
+  .img-sticky {
+    width: 100%;
+  }
+  .images {
+    width: 65px;
+    height: 63px;
+    margin-bottom: 5px;
+  }
 }
