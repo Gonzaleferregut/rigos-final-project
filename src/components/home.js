@@ -98,4 +98,4 @@ const LOGGED_IN_USER_QUERY = gql`
 export default graphql(LOGGED_IN_USER_QUERY, {
   name: 'loggedInUserQuery',
   options: { fetchPolicy: 'network-only' }
-})(Home)
+})(LoggedIn)

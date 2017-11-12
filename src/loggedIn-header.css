@@ -1,0 +1,30 @@
+header {
+  background-color: skyblue;
+  border: 2px black solid;
+  border-radius: 5px;
+}
+.img_title {
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  align-self: center;
+}
+.logout-btn-container {
+  display: flex;
+  align-self: flex-end;
+}
+.logout-btn {
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 400px) {
+  header {
+    width: 100%;
+    margin: 0;
+  }
+  h1 {
+    font-size: 18px;
+  }
+}
