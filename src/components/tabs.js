@@ -4,6 +4,7 @@ import {Tabs, Tab} from 'material-ui/Tabs'
 import PersonalInfo from './personalInfo'
 import BlackBoard from './blackBoard'
 import Messages from './messenger'
+import Calendar from './calendar'
 import '../tabs.css'
 
 const styles = {
@@ -48,38 +49,7 @@ export default class Main extends Component{
           <Tab label="Schelduling" value="b">
             <div>
               <h2 style={styles.headline}>Availability</h2>
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Date</th>
-                    <th>Day</th>
-                    <th>Availability</th>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Monday</td>
-                    <td>Available</td>
-                  </tr>
-                    <td>2</td>
-                    <td>Tuesday</td>
-                    <td>Available</td>
-                  <tr>
-                    <td>3</td>
-                    <td>Wednsday</td>
-                    <td>Available</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>Thursday</td>
-                    <td>Available</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>Friday</td>
-                    <td>Available</td>
-                  </tr>
-                </tbody>
-              </table>
+              <Calendar/>
             </div>
           </Tab>
 
