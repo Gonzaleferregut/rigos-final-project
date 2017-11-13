@@ -15,11 +15,11 @@ import MediaQuery from 'react-responsive'
 
 class Home extends Component {
 
-  _logout = () => {
-    // remove token from local storage and reload page to reset apollo client
-    localStorage.removeItem('graphcoolToken')
-    window.location.reload()
-  }
+  // _logout = () => {
+  //   // remove token from local storage and reload page to reset apollo client
+  //   localStorage.removeItem('graphcoolToken')
+  //   window.location.reload()
+  // }
 
   _isLoggedIn = () => {
     return this.props.loggedInUserQuery.loggedInUser && this.props.loggedInUserQuery.loggedInUser.id !== null
@@ -33,7 +33,7 @@ class Home extends Component {
     if(this._isLoggedIn()) {
       return this.renderLoggedIn()
     } else {
-      return this.render.LoggedOut()
+      return this.renderLoggedOut()
     }
   }
 
@@ -98,4 +98,4 @@ const LOGGED_IN_USER_QUERY = gql`
 export default graphql(LOGGED_IN_USER_QUERY, {
   name: 'loggedInUserQuery',
   options: { fetchPolicy: 'network-only' }
-})(LoggedIn)
+})(Home)

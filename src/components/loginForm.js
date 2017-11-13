@@ -3,6 +3,7 @@ import { graphql, compose } from 'react-apollo'
 import gql from 'graphql-tag'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
+import { withRouter } from 'react-router-dom'
 import '../logIn.css'
 
 const hideAutoFillColorStyle = {
@@ -27,12 +28,11 @@ class LoggingInForm extends Component {
       const response = await this.props.authenticateUserMutation({ variables: { email, password } })
       localStorage.setItem('graphcoolToken', response.data.authenticateUser.token)
       console.log(response.data)
-      window.location.reload()
       document.querySelector('form').reset()
-      // this.props.history.push('/')
+      this.props.history.push('/login-home')
     } catch (e) {
       console.error('An error occured: ', e)
-      // this.props.history.push('/')
+      alert('Invalid creditials')
     }
   }
 
@@ -96,4 +96,4 @@ export default compose(
     name: 'loggedInUserQuery',
     options: { fetchPolicy: 'network-only' }
   })
-)(LoggingInForm)
+)(withRouter(LoggingInForm))

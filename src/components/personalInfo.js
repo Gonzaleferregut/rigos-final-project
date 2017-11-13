@@ -60,39 +60,39 @@ export default class PersonalInfo extends Component {
           <div className="student-info">
             <div>
               <TextField name="studentName" required type="text"   floatingLabelText="Student Name:"
-              floatingLabelFixed = "true"
+              floatingLabelFixed
               floatingLabelStyle={styles.floatingLabelStyle}
               inputStyle={hideAutoFillColorStyle}
               onChange={this.handleTextChange}/>
 
               <TextField name="parentName" required type="text"   floatingLabelText="Parent Name:"
-              floatingLabelFixed = "true"
+              floatingLabelFixed
               floatingLabelStyle={styles.floatingLabelStyle}
               inputStyle={hideAutoFillColorStyle}
               onChange={this.handleTextChange}/>
             </div>
             <div>
               <TextField name="parentEmail" required type="email"   floatingLabelText="Parent Email:"
-              floatingLabelFixed = "true"
+              floatingLabelFixed
               floatingLabelStyle={styles.floatingLabelStyle}
               inputStyle={hideAutoFillColorStyle}
               onChange={this.handleTextChange}/>
 
               <TextField name="parentAddress" required type="text"   floatingLabelText="Parent Address:"
-              floatingLabelFixed = "true"
+              floatingLabelFixed
               floatingLabelStyle={styles.floatingLabelStyle}
               inputStyle={hideAutoFillColorStyle}
               onChange={this.handleTextChange}/>
             </div>
             <div>
               <TextField name="parentNumber" required type="number"   floatingLabelText="Parent Phone Number:"
-              floatingLabelFixed = "true"
+              floatingLabelFixed
               floatingLabelStyle={styles.floatingLabelStyle}
               inputStyle={hideAutoFillColorStyle}
               onChange={this.handleTextChange}/>
 
               <TextField name="teacherEmail" required type="email"   floatingLabelText="Teacher Email:"
-              floatingLabelFixed = "true"
+              floatingLabelFixed
               floatingLabelStyle={styles.floatingLabelStyle}
               inputStyle={hideAutoFillColorStyle}
               onChange={this.handleTextChange}/>

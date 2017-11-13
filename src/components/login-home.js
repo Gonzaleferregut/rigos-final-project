@@ -4,6 +4,7 @@ import Main from './tabs'
 import Quote from './quote-generator'
 import Footer from './footer'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+// import CarouselSlide from './carouselslide'
 import '../App.css'
 
 export default class LoggedIn extends Component {

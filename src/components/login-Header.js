@@ -8,7 +8,7 @@ export default class LoginHeader extends Component {
   _logout = () => {
     // remove token from local storage and reload page to reset apollo client
     localStorage.removeItem('graphcoolToken')
-    window.location.reload()
+    this.props.history.push('/')
   }
 
   render() {
@@ -20,7 +20,7 @@ export default class LoginHeader extends Component {
             <h1>Elementary Tutor</h1>
             <div className="logout-btn-container">
               <RaisedButton label="Logout" type="submit" className="logout-btn"
-              // onClick={this._logout()}
+              onClick={this._logout()}
               />
             </div>
           </div>

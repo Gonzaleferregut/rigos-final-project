@@ -6,6 +6,7 @@ import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Home from './components/home';
+import LoggedIn from './components/login-home'
 import NewUser from './components/signingUp';
 import LogIn from './components/log-in';
 import Link1 from './components/link1';
@@ -35,6 +36,7 @@ export default class App extends Component {
         <Route path="/home" component={Home} />
         <Route path="/createUser" component={NewUser}/>
         <Route path="/login" component={LogIn} />
+        <Route path="/login-home" component={LoggedIn} />
         <Route component={NotFound} />
       </Switch>
       </BrowserRouter>
