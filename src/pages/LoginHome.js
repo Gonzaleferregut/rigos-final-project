@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import LoginHeader from '../components/login-header'
-import Main from '../components/tabs'
+import LoginTabs from '../components/logintabs'
 import Quote from '../components/quote-generator'
 import Footer from '../components/footer'
-import { withRouter } from 'react-router-dom'
-// import CarouselSlide from './carouselslide'
 import '../App.css'
 
 class LoggedIn extends Component {
@@ -12,7 +11,7 @@ class LoggedIn extends Component {
     return (
       <div className="container">
         <LoginHeader />
-        <Main />
+        <LoginTabs />
         <Quote />
         <Footer />
       </div>

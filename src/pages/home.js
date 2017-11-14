@@ -10,8 +10,7 @@ import Services from '../components/services'
 import Quote from '../components/quote-generator'
 import Footer from '../components/footer'
 import LoggedIn from '../pages/LoginHome'
-import { Container, Row, Col } from 'reactstrap'
-import MediaQuery from 'react-responsive'
+import { withRouter } from 'react-router-dom'
 
 class Home extends Component {
 
@@ -66,4 +65,4 @@ const LOGGED_IN_USER_QUERY = gql`
 export default graphql(LOGGED_IN_USER_QUERY, {
   name: 'loggedInUserQuery',
   options: { fetchPolicy: 'network-only' }
-})(Home)
+})(withRouter(Home))

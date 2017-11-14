@@ -5,7 +5,7 @@ import PersonalInfo from './personalInfo'
 import BlackBoard from './blackBoard'
 import Messages from './messenger'
 import Calendar from './calendar'
-import '../tabs.css'
+import '../logintabs.css'
 
 const styles = {
   headline: {
@@ -20,7 +20,7 @@ const hideAutoFillColorStyle = {
   WebkitBoxShadow: '0 0 0 1000px lightgreen inset'
 };
 
-export default class Main extends Component{
+export default class LoginTabs extends Component{
   constructor(props) {
     super(props);
     this.state = {
