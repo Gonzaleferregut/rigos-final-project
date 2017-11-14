@@ -9,7 +9,8 @@ class LoginHeader extends Component {
   _logout = () => {
     // remove token from local storage and use history to push default route
     localStorage.removeItem('graphcoolToken')
-    this.props.history.push('/')
+    // window.location.reload()
+    // this.props.history.push('/')
   }
 
   render() {
@@ -23,7 +24,8 @@ class LoginHeader extends Component {
               <FlatButton label="Logout"
               type="submit"
               className="logout-btn"
-              onClick={this._logout()}/>
+              onClick={this._logout()}
+              />
             </div>
           </div>
         </header>

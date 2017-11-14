@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 import Header from '../components/header'
@@ -10,7 +11,7 @@ import Services from '../components/services'
 import Quote from '../components/quote-generator'
 import Footer from '../components/footer'
 import LoggedIn from '../pages/LoginHome'
-import { withRouter } from 'react-router-dom'
+
 
 class Home extends Component {
 

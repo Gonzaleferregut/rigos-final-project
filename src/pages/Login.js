@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { graphql, compose } from 'react-apollo'
 import gql from 'graphql-tag'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import LinkHeader from '../components/linkheader'
 import TextField from 'material-ui/TextField'
-import { withRouter } from 'react-router-dom'
+import { withRouter, NavLink } from 'react-router-dom'
 import '../logIn.css'
 
 const hideAutoFillColorStyle = {
@@ -69,6 +68,7 @@ class LogIn extends Component {
                 <input className="submit" type="submit"/>
                 <input className="reset" type="reset" />
               </div>
+              <NavLink to="/CreateUser" className="createuserlink">Create an Account</NavLink>
             </form>
           </div>
         </div>

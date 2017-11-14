@@ -10,10 +10,10 @@ class LoggedIn extends Component {
   render() {
     return (
       <div className="container">
-        <LoginHeader />
-        <LoginTabs />
-        <Quote />
-        <Footer />
+      <LoginHeader />
+      <LoginTabs />
+      <Quote />
+      <Footer />
       </div>
     )
   }

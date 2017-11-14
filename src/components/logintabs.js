@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Payment from './paymentForm'
+import CreatePayment from './CreatePayment'
 import {Tabs, Tab} from 'material-ui/Tabs'
 import PersonalInfo from './personalInfo'
 import BlackBoard from './blackBoard'
@@ -61,11 +61,10 @@ export default class LoginTabs extends Component{
 
           <Tab className="payment" label="Payment" value="d">
             <div className="payment-tab-contain">
-              <Payment />
+              <CreatePayment />
             </div>
           </Tab>
         </Tabs>
-
         <BlackBoard />
       </div>
     )

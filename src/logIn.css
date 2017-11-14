@@ -26,3 +26,7 @@ form {
   background-color: skyblue;
   border-radius: 5px;
 }
+.createuserlink {
+  display: flex;
+  justify-content: center;
+}
