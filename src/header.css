@@ -26,8 +26,7 @@ nav {
 }
 .main-menu li:hover .sub-menu {
   display: block;
-  /*width: 100%;*/
-  /*left: 0;*/
+  width: 10%;
 }
 .sub-menu a {
   color: blue;

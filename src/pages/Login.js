@@ -33,7 +33,7 @@ class LogIn extends Component {
       this.props.history.push('/LoginHome')
     } catch (e) {
       console.error('An error occured: ', e)
-      alert('Invalid creditials')
+      alert('Please create an account')
       this.props.history.push('/CreateUser')
     }
   }
