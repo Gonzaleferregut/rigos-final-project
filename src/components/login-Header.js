@@ -10,6 +10,7 @@ class LoginHeader extends Component {
     // remove token from local storage and use history to push default route
     localStorage.removeItem('graphcoolToken')
     // window.location.reload()
+    // with this.props.history.push('/') uncommented my route to /LoginHome does not work
     // this.props.history.push('/')
   }
 
