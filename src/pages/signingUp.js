@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import LinkHeader from '../components/linkheader'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -6,6 +7,7 @@ import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import Dialog from 'material-ui/Dialog'
 import { red500, black800, white, lightBlue200 } from 'material-ui/styles/colors'
+import { withRouter } from 'react-router-dom'
 import '../logIn.css'
 
 const styles = {
@@ -54,10 +56,10 @@ class CreateUser extends Component {
       localStorage.setItem('graphcoolToken', response.data.signupUser.token)
       console.log(response.data)
       document.querySelector('form').reset()
-      // this.props.history.push('/')
+      this.props.history.push('/login')
     } catch (e) {
       console.error('An error occured: ', e)
-      // this.props.history.push('/')
+      this.props.history.push('/login')
     }
   }
 
@@ -94,6 +96,7 @@ class CreateUser extends Component {
 
     return(
       <MuiThemeProvider>
+      <LinkHeader />
         <div className="contain">
           <div className="logIn">
             <form autoComplete="on" onSubmit={this._signUpUser}>
@@ -144,4 +147,4 @@ const SIGN_EMAIL_USER = gql`
   }
 `
 
-export default graphql(SIGN_EMAIL_USER, {name: 'signupUserMutation'})(CreateUser)
+export default graphql(SIGN_EMAIL_USER, {name: 'signupUserMutation'})(withRouter(CreateUser))

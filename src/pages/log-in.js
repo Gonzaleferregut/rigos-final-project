@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { graphql, compose } from 'react-apollo'
 import gql from 'graphql-tag'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import LinkHeader from '../components/linkheader'
 import TextField from 'material-ui/TextField'
 import { withRouter } from 'react-router-dom'
 import '../logIn.css'
@@ -10,7 +11,7 @@ const hideAutoFillColorStyle = {
   WebkitBoxShadow: '0 0 0 1000px white inset'
 };
 
-class LoggingInForm extends Component {
+class LogIn extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -46,7 +47,8 @@ class LoggingInForm extends Component {
 
   render() {
     return(
-      <MuiThemeProvider>
+      <div className="container">
+        <LinkHeader />
         <div className="contain">
           <div className="logIn">
             <form autoComplete="on" onSubmit={this._loginUser}>
@@ -69,7 +71,7 @@ class LoggingInForm extends Component {
             </form>
           </div>
         </div>
-      </MuiThemeProvider>
+      </div>
     )
   }
 }
@@ -96,4 +98,4 @@ export default compose(
     name: 'loggedInUserQuery',
     options: { fetchPolicy: 'network-only' }
   })
-)(withRouter(LoggingInForm))
+)(withRouter(LogIn))

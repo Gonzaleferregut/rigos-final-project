@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import RaisedButton from 'material-ui/RaisedButton'
 import '../loggedIn-header.css'
 
 
-export default class LoginHeader extends Component {
+class LoginHeader extends Component {
 
   _logout = () => {
     // remove token from local storage and reload page to reset apollo client
@@ -20,8 +21,7 @@ export default class LoginHeader extends Component {
             <h1>Elementary Tutor</h1>
             <div className="logout-btn-container">
               <RaisedButton label="Logout" type="submit" className="logout-btn"
-              onClick={this._logout()}
-              />
+              onClick={this._logout()} />
             </div>
           </div>
         </header>
@@ -29,3 +29,5 @@ export default class LoginHeader extends Component {
     )
   }
 }
+
+export default (withRouter(LoginHeader))
