@@ -56,7 +56,7 @@ class CreateUser extends Component {
       localStorage.setItem('graphcoolToken', response.data.signupUser.token)
       console.log(response.data)
       document.querySelector('form').reset()
-      this.props.history.push('/login')
+      this.props.history.push('/Login')
     } catch (e) {
       console.error('An error occured: ', e)
       this.props.history.push('/login')

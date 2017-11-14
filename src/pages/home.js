@@ -3,13 +3,13 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 import Header from '../components/header'
 import Carousel from '../components/carousel'
-import Sticky1 from './sticky1'
-import Sticky2 from './sticky2'
+import Sticky1 from './Sticky1'
+import Sticky2 from './Sticky2'
 import Sticky3 from '../components/sticky3'
 import Services from '../components/services'
 import Quote from '../components/quote-generator'
 import Footer from '../components/footer'
-import LoggedIn from '../pages/login-home'
+import LoggedIn from '../pages/LoginHome'
 import { Container, Row, Col } from 'reactstrap'
 import MediaQuery from 'react-responsive'
 
@@ -49,7 +49,7 @@ class Home extends Component {
         </div>
         <Services />
         <Quote />
-        Footer />
+        <Footer />
       </div>
     )
   }

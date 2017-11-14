@@ -7,7 +7,7 @@ export default class Sticky2 extends Component {
     return(
       <div className="sticky2 sticky">
         <div className="sticky-top"></div>
-        <Link to="/sticky2link">Students Tips and Tricks!!</Link>
+        <Link to="/Sticky2link">Students Tips and Tricks!!</Link>
       </div>
     )
   }

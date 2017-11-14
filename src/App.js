@@ -5,12 +5,12 @@ import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Home from './pages/home';
-import CreateUser from './pages/signingUp';
-import LoggedIn from './pages/login-home'
-import LogIn from './pages/log-in';
-import Link1 from './pages/link1';
-import Link2 from './pages/link2';
+import Home from './pages/Home';
+import CreateUser from './pages/Signup';
+import LoggedIn from './pages/LoginHome'
+import LogIn from './pages/Login';
+import Link1 from './pages/Link1';
+import Link2 from './pages/Link2';
 import NotFound from './pages/NotFound';
 import './App.css';
 
@@ -31,11 +31,11 @@ export default class App extends Component {
       <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/sticky1link" component={Link1} />
-        <Route path="/sticky2link" component={Link2} />
-        <Route path="/createUser" component={CreateUser} />
-        <Route path="/login" component={LogIn} />
-        <Route path="/login-home" component={LoggedIn} />
+        <Route path="/Sticky1link" component={Link1} />
+        <Route path="/Sticky2link" component={Link2} />
+        <Route path="/CreateUser" component={CreateUser} />
+        <Route path="/Login" component={LogIn} />
+        <Route path="/LoginHome" component={LoggedIn} />
         <Route component={NotFound} />
       </Switch>
       </BrowserRouter>

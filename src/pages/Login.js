@@ -30,10 +30,11 @@ class LogIn extends Component {
       localStorage.setItem('graphcoolToken', response.data.authenticateUser.token)
       console.log(response.data)
       document.querySelector('form').reset()
-      this.props.history.push('/login-home')
+      this.props.history.push('/LoginHome')
     } catch (e) {
       console.error('An error occured: ', e)
       alert('Invalid creditials')
+      this.props.history.push('/CreateUser')
     }
   }
 
