@@ -3,9 +3,31 @@
   justify-content: center;
 }
 .about_me {
-  width: 50%;
   margin: 0 auto;
-  padding: 15px;
+  /*padding: 5px;*/
+}
+.backskyblue {
+  background-color: skyblue;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.backwhite {
+  background-color: white;
+  padding: 5px;
+  border: 2px solid black;
+}
+.about-text {
+  display: flex;
+  flex-direction: column;
+}
+.firstp {
+  width: 80%;
+  align-self: center;
+}
+.secondp {
+  width: 90%;
+  align-self: center;
 }
 
 @media only screen and (max-width: 400px) {

@@ -15,18 +15,21 @@ nav {
   align-self: flex-end;
 }
 .main-menu {
-  margin-right: 15px;
+  margin: 3px 0;
 }
+
+
 .main-menu a {
   color: black;
   text-decoration: none;
 }
+
+
 .main-menu li, .sub-menu li {
   list-style: none;
 }
 .main-menu li:hover .sub-menu {
   display: block;
-  width: 10%;
 }
 .sub-menu a {
   color: blue;

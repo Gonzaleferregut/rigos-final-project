@@ -1,5 +1,5 @@
 .quote {
-  height: 150px;
+  height: auto;
   border: 2px black solid;
   border-radius: 5px;
   background-image: url('https://www.gravatar.com/userimage/126022818/3837faf314ed34a71c19bb6fadbae31c?size=120');

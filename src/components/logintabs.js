@@ -16,10 +16,6 @@ const styles = {
   },
 };
 
-const hideAutoFillColorStyle = {
-  WebkitBoxShadow: '0 0 0 1000px lightgreen inset'
-};
-
 export default class LoginTabs extends Component{
   constructor(props) {
     super(props);

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import FlatButton from 'material-ui/FlatButton';
 import '../header.css'
 
 
@@ -13,7 +14,7 @@ export default class Header extends Component {
             <h1>Elementary Tutor</h1>
             <nav>
               <ul className="main-menu">
-                <li><a href="#">Menu</a>
+                <li><FlatButton label="Menu" type="submit" />
                   <ul className="sub-menu">
                     <li><Link to='/CreateUser'>Sign up</Link></li>
                     <li><Link to='/Login'>Log In</Link></li>

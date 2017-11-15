@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import About from './about-me.js'
 import Contact from './CreateContact'
 import { BrowserRouter } from 'react-router-dom'
 import { List, ListItem } from 'material-ui/List'
@@ -13,7 +12,7 @@ export default class Services extends Component {
   constructor() {
     super()
     this.state = {
-      message: 'Click Above for More Info!'
+      message: 'Click Above for More Info!!!'
     }
   }
 
@@ -65,7 +64,6 @@ export default class Services extends Component {
             </div>
           </BrowserRouter>
         </section>
-        <About />
         <Contact />
       </div>
     )

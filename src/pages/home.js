@@ -8,6 +8,7 @@ import Sticky1 from './Sticky1'
 import Sticky2 from './Sticky2'
 import Sticky3 from '../components/sticky3'
 import Services from '../components/services'
+import About from '../components/about-me'
 import Quote from '../components/quote-generator'
 import Footer from '../components/footer'
 import LoggedIn from '../pages/LoginHome'
@@ -48,6 +49,7 @@ class Home extends Component {
           <Sticky3 />
         </div>
         <Services />
+        <About />
         <Quote />
         <Footer />
       </div>

@@ -115,7 +115,7 @@ class CreateContact extends Component {
     ];
 
     return (
-      <section className="contact-form">
+      <section>
         <div className="top-panel">
             <h2>Contact Me</h2>
         </div>

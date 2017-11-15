@@ -7,7 +7,7 @@ export default class BlackBoard extends Component {
     return(
       <div className="blackBoard">
         <p>
-          A lot of text goes here maybe to describes some directions for using BlackBoard. A lot of text goes here maybe to describes some directions for using BlackBoard. A lot of text goes here maybe to describes some directions for using BlackBoard. <a href="#">With a link!</a>
+          If you are new to Black Board create an account then sign in for your schelduled class time <a href="#">Go to Black Board!!</a>
         </p>
       </div>
     )

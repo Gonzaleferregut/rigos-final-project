@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-import SelectField from 'material-ui/SelectField'
-import MenuItem from 'material-ui/MenuItem'
 import RaisedButton from 'material-ui/RaisedButton'
 import { black800 } from 'material-ui/styles/colors';
 import '../paymentForm.css'
@@ -24,17 +22,16 @@ const hideAutoFillColorStyle = {
 
 class CreatePayment extends Component {
   constructor(props) {
-      super(props)
-      this.state = {
-        owner: "",
-        cvv: "",
-        cardNumber: "",
-        expmonth: "0",
-        expyear: "0"
-      }
-      this.handleTextChange = this.handleTextChange.bind(this)
-      this.handleSelectChange = this.handleSelectChange.bind(this)
-      this.handleSubmit = this.handleSubmit.bind(this)
+    super(props)
+    this.state = {
+      owner: "",
+      cvv: "",
+      cardNumber: "",
+      expMonth: "",
+      expYear: ""
+    }
+    this.handleTextChange = this.handleTextChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleTextChange(event) {
@@ -44,17 +41,23 @@ class CreatePayment extends Component {
           [name]: value // using ES6 computed property name
       })
   }
-
-  handleSelectChange(key) {
+// how to save result to
+  handleSelectChange(val) {
+    let y = document.getElementById("expyear").options;
+    let x = document.getElementById("expyear").selectedIndex;
+    let month = y[x].text
     this.setState({
-        expmonth: key.toString()
+        expmonth: month,
+        // expyear: year
     })
   }
 
   handleSubmit(event) {
     event.preventDefault()
     console.log(this.state)
-    this._createPayment()
+    this.getExpMonth()
+    this.getExpYear()
+    // this._createPayment()
   }
 
   _createPayment = async () => {
@@ -69,12 +72,27 @@ class CreatePayment extends Component {
                 cvv: "",
                 cardNumber: "",
                 expmonth: "",
-                expyear: ""
+                // expyear: ""
               }
           })
       } catch (error) {
           console.log(error)
       }
+  }
+
+  getExpMonth(val) {
+    let y = document.getElementById("expmonth").options;
+    let x = document.getElementById("expmonth").selectedIndex;
+    // let month = y[x].text
+    console.log(y[x].text)
+    document.querySelector("form").reset()
+}
+
+  getExpYear(val) {
+    let y = document.getElementById("expyear").options;
+    let x = document.getElementById("expyear").selectedIndex;
+    let year = y[x].text
+    console.log(y[x].text)
   }
 
   render() {
@@ -90,25 +108,25 @@ class CreatePayment extends Component {
               onChange={this.handleTextChange}/>
               <input name="cardNumber" className="input" type="number" placeholder="Card Number"
               onChange={this.handleTextChange}/>
-              <select className="expDate"
-              onChange={(event,key) =>
-                this.handleSelectChange(key)}>
+              <select className="expDate" id="expmonth"
+              // onChange={this.getExpMonth}
+              onChange={this.handleSelectChange}>
                 <option defaultValue>Month</option>
-                <option value="0">January</option>
-                <option value="1">February</option>
-                <option value="2">March</option>
-                <option value="3">April</option>
-                <option value="4">May</option>
-                <option value="5">June</option>
-                <option value="6">July</option>
-                <option value="7">August</option>
-                <option value="8">September</option>
-                <option value="9">October</option>
-                <option value="10">November</option>
-                <option value="11">December</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
               </select>
-              <select className="expYear"
-                onChange={this.handleSelectChange}>
+              <select className="expYear" id="expyear"
+                onChange={this.getExpYear}>
                 <option>2025</option>
                 <option>2024</option>
                 <option>2023</option>
@@ -145,7 +163,7 @@ mutation CreatePaymentMutation($owner: String!, $cvv: String!, $cardNumber: Stri
     ) {
         id
         createdAt
-        fullName
+        owner
     }
 }
 `

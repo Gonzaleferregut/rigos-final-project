@@ -46,6 +46,9 @@ a {
   transform: rotate(5deg);
   box-shadow: 1px 3px 10px gray;
 }
+.sticky4 {
+  margin-bottom: 23px;
+}
 ol li {
   position: relative;
   bottom: 5px;

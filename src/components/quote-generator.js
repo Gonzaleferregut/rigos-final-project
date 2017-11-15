@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import '../quote.css'
 
 // axios.get(`http://quotes.rest/qod/json`)
@@ -10,7 +10,7 @@ import '../quote.css'
 export default class Quote extends Component {
   render() {
     return(
-      <div className="qqq">
+      <div>
         <hr />
         <div>
           <div className="quote">
