@@ -13,6 +13,7 @@ import Quote from '../components/quote-generator'
 import Footer from '../components/footer'
 import LoggedIn from '../pages/LoginHome'
 
+import FlipCard from '../components/flipcard'
 
 class Home extends Component {
 
@@ -40,18 +41,25 @@ class Home extends Component {
 
   renderLoggedOut() {
     return (
-      <div className="container">
-        <Header />
-        <Carousel />
-        <div className="sticky-contain">
-          <Sticky1 />
-          <Sticky2 />
-          <Sticky3 />
+      <div>
+        <div className="container">
+          <Header />
+          <Carousel />
+          <div className="sticky-contain">
+            <Sticky1 />
+            <Sticky2 />
+            <Sticky3 />
+          </div>
+          <Services />
+          <div className="flipcards">
+            <FlipCard />
+          </div>
         </div>
-        <Services />
         <About />
-        <Quote />
-        <Footer />
+        <div className="container">
+          <Quote />
+          <Footer />
+        </div>
       </div>
     )
   }

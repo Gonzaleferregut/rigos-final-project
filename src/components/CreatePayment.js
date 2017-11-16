@@ -27,11 +27,13 @@ class CreatePayment extends Component {
       owner: "",
       cvv: "",
       cardNumber: "",
-      expMonth: "",
-      expYear: ""
+      expmonth: "",
+      expyear: ""
     }
     this.handleTextChange = this.handleTextChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.getExpMonth = this.getExpMonth.bind(this)
+    this.getExpYear = this.getExpYear.bind(this)
   }
 
   handleTextChange(event) {
@@ -41,30 +43,41 @@ class CreatePayment extends Component {
           [name]: value // using ES6 computed property name
       })
   }
-// how to save result to
-  handleSelectChange(val) {
-    let y = document.getElementById("expyear").options;
-    let x = document.getElementById("expyear").selectedIndex;
-    let month = y[x].text
-    this.setState({
-        expmonth: month,
-        // expyear: year
-    })
-  }
 
   handleSubmit(event) {
     event.preventDefault()
     console.log(this.state)
     this.getExpMonth()
     this.getExpYear()
-    // this._createPayment()
+    this._createPayment()
+  }
+
+  getExpMonth() {
+    let y = document.getElementById("expmonth").options;
+    let x = document.getElementById("expmonth").selectedIndex;
+    let month = y[x].text
+    console.log(y[x].text)
+    this.setState({
+      expmonth: month
+    })
+    document.querySelector("form").reset()
+  }
+
+  getExpYear() {
+    let y = document.getElementById("expyear").options;
+    let x = document.getElementById("expyear").selectedIndex;
+    let year = y[x].text
+    console.log(y[x].text)
+    this.setState({
+      expyear: year
+    })
   }
 
   _createPayment = async () => {
-      const options = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
-      const key = parseInt(this.state.expmonth)
-      const expmonth = options[key]
-      const { owner, cvv, cardNumber, expyear } = this.state
+      // const options = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
+      // const key = parseInt(this.state.expmonth)
+      // const expmonth = options[key]
+      const { owner, cvv, cardNumber, expmonth, expyear } = this.state
       try {
           await this.props.createPaymentMutation({
               variables: {
@@ -72,27 +85,12 @@ class CreatePayment extends Component {
                 cvv: "",
                 cardNumber: "",
                 expmonth: "",
-                // expyear: ""
+                expyear: ""
               }
           })
       } catch (error) {
           console.log(error)
       }
-  }
-
-  getExpMonth(val) {
-    let y = document.getElementById("expmonth").options;
-    let x = document.getElementById("expmonth").selectedIndex;
-    // let month = y[x].text
-    console.log(y[x].text)
-    document.querySelector("form").reset()
-}
-
-  getExpYear(val) {
-    let y = document.getElementById("expyear").options;
-    let x = document.getElementById("expyear").selectedIndex;
-    let year = y[x].text
-    console.log(y[x].text)
   }
 
   render() {
@@ -104,26 +102,24 @@ class CreatePayment extends Component {
             <form autoComplete="on" onSubmit={this.handleSubmit}>
               <input name="owner" className="input" type="text" placeholder="Owner"
               onChange={this.handleTextChange}/>
-              <input name="cvv" className="input" type="text" placeholder="CVV"
+              <input name="cvv" className="input" type="number" placeholder="CVV"
               onChange={this.handleTextChange}/>
               <input name="cardNumber" className="input" type="number" placeholder="Card Number"
               onChange={this.handleTextChange}/>
               <select className="expDate" id="expmonth"
-              // onChange={this.getExpMonth}
-              onChange={this.handleSelectChange}>
-                <option defaultValue>Month</option>
-                <option>January</option>
-                <option>February</option>
-                <option>March</option>
-                <option>April</option>
-                <option>May</option>
-                <option>June</option>
-                <option>July</option>
-                <option>August</option>
-                <option>September</option>
-                <option>October</option>
-                <option>November</option>
-                <option>December</option>
+                onChange={this.getExpMonth}>
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
               </select>
               <select className="expYear" id="expyear"
                 onChange={this.getExpYear}>
@@ -135,7 +131,7 @@ class CreatePayment extends Component {
                 <option>2020</option>
                 <option>2019</option>
                 <option>2018</option>
-                <option defaultValue>2017</option>
+                <option>2017</option>
                 <option>2016</option>
                 <option>2015</option>
                 <option>2014</option>
@@ -153,18 +149,18 @@ class CreatePayment extends Component {
 }
 
 const CREATE_PAYMENT_MUTATION = gql`
-mutation CreatePaymentMutation($owner: String!, $cvv: String!, $cardNumber: String!, $expmonth: Expmonth!, $expyear: Expyear!) {
-    createPayment(
-        owner: $owner,
-        cvv: $cvv,
-        cardNumber: $cardNumber,
-        expmonth: $expmonth,
-        expyear: $expyear
-    ) {
-        id
-        createdAt
-        owner
-    }
+mutation CreatePaymentMutation($owner: String!, $cvv: String!, $cardNumber: String!, $expmonth: Expmonth!, $expyear: String!) {
+  createPaymentInfo(
+      owner: $owner,
+      cvv: $cvv,
+      cardNumber: $cardNumber,
+      expMonth: $expmonth,
+      expYear: $expyear
+  ) {
+    id
+    createdAt
+    owner
+  }
 }
 `
 

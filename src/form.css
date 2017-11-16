@@ -11,6 +11,12 @@
   justify-content: center;
   align-items: center;
 }
+.section {
+  border: 2px black solid;
+  border-radius: 5px;
+  width: 30%;
+  background-color: skyblue;
+}
 .btn {
   display: flex;
   justify-content: space-around;

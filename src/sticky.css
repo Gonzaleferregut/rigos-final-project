@@ -6,7 +6,6 @@ a {
   display: flex;
   justify-content: space-around;
   margin: 15px;
-  width: 100%;
 }
 .sticky {
   height: auto;
@@ -23,7 +22,7 @@ a {
   text-decoration: none;
 }
 .sticky > a:hover {
-  color: red;
+  color: blue;
 }
 .sticky3 > p {
   display: flex;
@@ -36,14 +35,14 @@ a {
   height: 15px;
 }
 .sticky1 {
-  transform: rotate(-5deg);
+  /*transform: rotate(-5deg);*/
   box-shadow: -1px 3px 10px gray;
 }
 .sticky2 {
   box-shadow: 0 3px 10px gray;
 }
 .sticky3 {
-  transform: rotate(5deg);
+  /*transform: rotate(5deg);*/
   box-shadow: 1px 3px 10px gray;
 }
 .sticky4 {
