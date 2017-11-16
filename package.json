@@ -19,9 +19,11 @@
     "react-responsive": "^3.0.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
+    "react-slick": "^0.15.4",
     "react-swipeable-views": "^0.12.10",
     "react-transition-group": "^2.2.1",
-    "reactstrap": "^4.8.0"
+    "reactstrap": "^4.8.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
