@@ -11,7 +11,7 @@ class LoginHeader extends Component {
     localStorage.removeItem('graphcoolToken')
     // window.location.reload()
     // with this.props.history.push('/') uncommented my route to /LoginHome does not work
-    // this.props.history.push('/')
+    this.props.history.push('/')
   }
 
   render() {
@@ -25,7 +25,7 @@ class LoginHeader extends Component {
               <FlatButton label="Logout"
               type="submit"
               className="logout-btn"
-              onClick={this._logout()}
+              onClick={this._logout}
               />
             </div>
           </div>
