@@ -48,7 +48,7 @@ class CreatePayment extends Component {
     event.preventDefault()
     console.log(this.state)
     this._createPayment()
-    document.querySelector("form").reset()
+    document.querySelector("form").reset()//still working on resetting form
   }
 
   getExpMonth() {

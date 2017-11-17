@@ -1,11 +1,15 @@
 .tabs {
   margin: 5px;
 }
+/* css styles for calendar
+*/
 .calendar-container {
   display: flex;
   justify-content: center;
   margin: 10px;
 }
+/* css styles for blackBoard
+*/
 .blackBoard {
   border: 2px solid black;
   border-radius: 5px;
