@@ -8,8 +8,6 @@ import ActionAssignment from 'material-ui/svg-icons/action/assignment'
 import ContentAddBox from 'material-ui/svg-icons/content/add-box'
 import '../styles/services.css'
 
-
-
 export default class Services extends Component {
   constructor() {
     super()

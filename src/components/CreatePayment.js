@@ -48,7 +48,7 @@ class CreatePayment extends Component {
     event.preventDefault()
     console.log(this.state)
     this._createPayment()
-    document.querySelector("form").reset()//still working on resetting form
+    document.getElementById("form").reset()
   }
 
   getExpMonth() {
@@ -72,20 +72,20 @@ class CreatePayment extends Component {
   }
 
   _createPayment = async () => {
-      const { owner, cvv, cardNumber, expMonth, expYear } = this.state
-      try {
-          await this.props.createPaymentMutation({
-              variables: {
-                owner,
-                cvv,
-                cardNumber,
-                expMonth,
-                expYear
-              }
-          })
-      } catch (error) {
-          console.log(error)
-      }
+    const { owner, cvv, cardNumber, expMonth, expYear } = this.state
+    try {
+      await this.props.createPaymentMutation({
+        variables: {
+          owner,
+          cvv,
+          cardNumber,
+          expMonth,
+          expYear
+        }
+      })
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   render() {
@@ -94,7 +94,7 @@ class CreatePayment extends Component {
         <div className="payment-contain">
           <h2 style={styles.headline}>Confirm Payment</h2>
           <div className="form">
-            <form autoComplete="on" onSubmit={this.handleSubmit}>
+            <form id="form" autoComplete="on" onSubmit={this.handleSubmit}>
               <input name="owner" className="input" type="text" placeholder="Owner"
               onChange={this.handleTextChange}/>
               <input name="cvv" className="input" type="number" placeholder="CVV"
@@ -146,17 +146,17 @@ class CreatePayment extends Component {
 
 const CREATE_PAYMENT_MUTATION = gql`
 mutation CreatePaymentMutation($owner: String!, $cvv: String!, $cardNumber: String!, $expMonth: Expmonth!, $expYear: String!) {
-    createPaymentInfo(
-        owner: $owner,
-        cvv: $cvv,
-        cardNumber: $cardNumber,
-        expMonth: $expMonth,
-        expYear: $expYear
-    ) {
-        id
-        createdAt
-        owner
-    }
+  createPaymentInfo(
+      owner: $owner,
+      cvv: $cvv,
+      cardNumber: $cardNumber,
+      expMonth: $expMonth,
+      expYear: $expYear
+  ) {
+      id
+      createdAt
+      owner
+  }
 }
 `
 

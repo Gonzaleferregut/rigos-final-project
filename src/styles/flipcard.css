@@ -1,8 +1,10 @@
 .maincontainer {
   position: relative;
-  width: 400px;
-  height: 250px;
-  margin: 10px;
+  /*width: 400px;
+  height: 250px;*/
+  width: 100%;
+  height: 300px;
+  /*margin: 10px;*/
 }
 .thecard {
   position: absolute;
@@ -11,29 +13,32 @@
   transform-style: preserve-3d;
   transition: all 1s ease;
 }
-.thecard:hover {
+/*.thecard:hover {
   transform: rotateY(180deg);
-}
+}*/
 .thefront {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: skyblue;
+  background-color: lightgreen;
   border-radius: 5px;
-  color: red;
+  color: black;
 }
 .theback {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
   border-radius: 5px;
-  background-color: gray;
-  color: blue;
+  backface-visibility: hidden;
+  background-color: red;
+  color: black;
   transform: rotateY(180deg);
 }
 .flipcards {
   display: flex;
   justify-content: center;
 }
+/*.faces {
+  backface-visibility: hidden;
+}*/
