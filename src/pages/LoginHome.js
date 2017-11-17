@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
-import LoginHeader from '../components/login-header'
+
+import LoginHeader from '../components/login-Header'
 import LoginTabs from '../components/logintabs'
 import Quote from '../components/quote-generator'
 import Footer from '../components/footer'
@@ -19,4 +19,4 @@ class LoggedIn extends Component {
   }
 }
 
-export default (withRouter(LoggedIn))
+export default LoggedIn
