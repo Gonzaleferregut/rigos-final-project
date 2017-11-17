@@ -8,7 +8,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import Dialog from 'material-ui/Dialog'
 import { red500, black800, white, lightBlue200 } from 'material-ui/styles/colors'
 import { withRouter } from 'react-router-dom'
-import '../logIn.css'
+import '../styles/logIn.css'
 
 const styles = {
     errorStyle: {

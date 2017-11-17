@@ -3,7 +3,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
 import { black800 } from 'material-ui/styles/colors'
 import axios from 'axios'
-import '../personalInfo.css'
+import '../styles/personalInfo.css'
 
 const styles = {
     floatingLabelStyle: {

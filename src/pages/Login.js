@@ -4,7 +4,7 @@ import gql from 'graphql-tag'
 import LinkHeader from '../components/linkheader'
 import TextField from 'material-ui/TextField'
 import { withRouter, NavLink } from 'react-router-dom'
-import '../logIn.css'
+import '../styles/logIn.css'
 
 const hideAutoFillColorStyle = {
   WebkitBoxShadow: '0 0 0 1000px white inset'

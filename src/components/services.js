@@ -6,7 +6,7 @@ import ContentCreate from 'material-ui/svg-icons/content/create'
 import LibraryBooks from 'material-ui/svg-icons/av/library-books'
 import ActionAssignment from 'material-ui/svg-icons/action/assignment'
 import ContentAddBox from 'material-ui/svg-icons/content/add-box'
-import '../services.css'
+import '../styles/services.css'
 
 
 

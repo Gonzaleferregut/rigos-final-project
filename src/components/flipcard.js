@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../flipcard.css'
+import '../styles/flipcard.css'
 
 export default class FlipCard extends Component {
   render() {

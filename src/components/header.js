@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import FlatButton from 'material-ui/FlatButton';
-import '../header.css'
+import '../styles/header.css'
 
 
 export default class Header extends Component {

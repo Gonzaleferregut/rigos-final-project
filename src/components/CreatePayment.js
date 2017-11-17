@@ -3,7 +3,7 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import RaisedButton from 'material-ui/RaisedButton'
 import { black800 } from 'material-ui/styles/colors';
-import '../paymentForm.css'
+import '../styles/paymentform.css'
 
 const styles = {
   headline: {
@@ -30,7 +30,6 @@ class CreatePayment extends Component {
       expMonth: "",
       expYear: ""
     }
-
     this.handleTextChange = this.handleTextChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.getExpMonth = this.getExpMonth.bind(this)
@@ -48,9 +47,8 @@ class CreatePayment extends Component {
   handleSubmit(event) {
     event.preventDefault()
     console.log(this.state)
-    // this.getExpMonth()
-    // this.getExpYear()
     this._createPayment()
+    document.querySelector("form").reset()
   }
 
   getExpMonth() {
@@ -61,7 +59,6 @@ class CreatePayment extends Component {
     this.setState({
       expMonth: month
     })
-    document.querySelector("form").reset()
   }
 
   getExpYear() {
@@ -75,9 +72,6 @@ class CreatePayment extends Component {
   }
 
   _createPayment = async () => {
-      // const options = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
-      // const key = parseInt(this.state.expmonth)
-      // const expmonth = options[key]
       const { owner, cvv, cardNumber, expMonth, expYear } = this.state
       try {
           await this.props.createPaymentMutation({

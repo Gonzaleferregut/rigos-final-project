@@ -8,7 +8,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import Dialog from 'material-ui/Dialog'
 import { red500, black800, white, lightBlue200 } from 'material-ui/styles/colors'
 import Sticky4 from './sticky4'
-import '../form.css'
+import '../styles/form.css'
 
 const styles = {
   errorStyle: {

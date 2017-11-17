@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import axios from 'axios'
-import '../quote.css'
+import '../styles/quote.css'
 
 // axios.get(`http://quotes.rest/qod/json`)
 //   .then(res => {

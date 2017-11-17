@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../sticky.css'
+import '../styles/sticky.css'
 
 export default class Sticky3 extends Component {
   render() {

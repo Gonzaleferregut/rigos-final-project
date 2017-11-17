@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 import CreatePayment from './CreatePayment'
 import {Tabs, Tab} from 'material-ui/Tabs'
 import PersonalInfo from './personalInfo'
-import BlackBoard from './blackBoard'
 import Messages from './messenger'
-import Calendar from './calendar'
-import '../logintabs.css'
+import '../styles/logintabs.css'
 
 const styles = {
   headline: {
@@ -45,7 +43,9 @@ export default class LoginTabs extends Component{
           <Tab label="Schelduling" value="b">
             <div>
               <h2 style={styles.headline}>Availability</h2>
-              <Calendar/>
+              <div className="calendar-container">
+                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=300&amp;wkst=1&amp;hl=en&amp;bgcolor=%23ffffff&amp;src=rigoberto.gonzaleferregut%40gmail.com&amp;color=%23A32929&amp;ctz=America%2FChicago" width="500" height="300" frameBorder="0" scrolling="no"></iframe>
+              </div>
             </div>
           </Tab>
 
@@ -61,7 +61,11 @@ export default class LoginTabs extends Component{
             </div>
           </Tab>
         </Tabs>
-        <BlackBoard />
+        <div className="blackBoard">
+          <p>
+            If you are new to Black Board, first click on the link, create an account, then log into your account for your schelduled tutoring session! <a href="#">Go to Black Board!!</a>
+          </p>
+        </div>
       </div>
     )
   }

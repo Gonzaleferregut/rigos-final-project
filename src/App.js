@@ -14,7 +14,7 @@ import CreateUser from './pages/Signup'
 import LogIn from './pages/Login'
 import LoggedIn from './pages/LoginHome'
 import NotFound from './pages/NotFound'
-import './App.css'
+import './styles/App.css'
 
 const httpLink = new HttpLink({
   uri: 'https://api.graph.cool/simple/v1/cj9rk264bd1j501136auolac2'

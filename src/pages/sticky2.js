@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import '../sticky.css'
+import '../styles/sticky.css'
 
 export default class Sticky2 extends Component {
   render() {

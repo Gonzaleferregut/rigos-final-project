@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import LinkHeader from '../components/linkheader'
 import Carousel from '../components/carousel'
-import '../link1.css'
+import '../styles/link1.css'
 
 export default class Link1 extends Component {
   render() {
