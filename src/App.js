@@ -7,9 +7,9 @@ import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
-import Home from './pages/Home'
-import Link1 from './pages/Link1'
-import Link2 from './pages/Link2'
+import Home from './pages/home'
+import Link1 from './pages/link1'
+import Link2 from './pages/link2'
 import CreateUser from './pages/Signup'
 import LogIn from './pages/Login'
 import LoggedIn from './pages/LoginHome'
@@ -37,7 +37,7 @@ export default class App extends Component {
         <Route path="/Sticky2link" component={Link2} />
         <Route path="/CreateUser" component={CreateUser} />
         <Route path="/Login" component={LogIn} />
-        <Route path="/LoginHome" component={LoggedIn} />
+        <Route exact path="/LoginHome" component={LoggedIn} />
         <Route component={NotFound} />
       </Switch>
       </BrowserRouter>

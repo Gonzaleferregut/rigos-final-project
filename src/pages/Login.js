@@ -33,7 +33,7 @@ class LogIn extends Component {
     } catch (e) {
       console.error('An error occured: ', e)
       alert('Please create an account')
-      this.props.history.push('/CreateUser')
+      // this.props.history.push('/CreateUser')
     }
   }
 

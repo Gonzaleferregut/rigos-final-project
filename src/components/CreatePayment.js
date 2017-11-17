@@ -27,9 +27,10 @@ class CreatePayment extends Component {
       owner: "",
       cvv: "",
       cardNumber: "",
-      expmonth: "",
-      expyear: ""
+      expMonth: "",
+      expYear: ""
     }
+
     this.handleTextChange = this.handleTextChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.getExpMonth = this.getExpMonth.bind(this)
@@ -47,29 +48,29 @@ class CreatePayment extends Component {
   handleSubmit(event) {
     event.preventDefault()
     console.log(this.state)
-    this.getExpMonth()
-    this.getExpYear()
+    // this.getExpMonth()
+    // this.getExpYear()
     this._createPayment()
   }
 
   getExpMonth() {
-    let y = document.getElementById("expmonth").options;
-    let x = document.getElementById("expmonth").selectedIndex;
-    let month = y[x].text
-    console.log(y[x].text)
+    let y = document.getElementById("expMonth").options;
+    let x = document.getElementById("expMonth").selectedIndex;
+    let month = y[x].text.toUpperCase()
+    console.log(month)
     this.setState({
-      expmonth: month
+      expMonth: month
     })
     document.querySelector("form").reset()
   }
 
   getExpYear() {
-    let y = document.getElementById("expyear").options;
-    let x = document.getElementById("expyear").selectedIndex;
+    let y = document.getElementById("expYear").options;
+    let x = document.getElementById("expYear").selectedIndex;
     let year = y[x].text
-    console.log(y[x].text)
+    console.log(year)
     this.setState({
-      expyear: year
+      expYear: year
     })
   }
 
@@ -77,15 +78,15 @@ class CreatePayment extends Component {
       // const options = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
       // const key = parseInt(this.state.expmonth)
       // const expmonth = options[key]
-      const { owner, cvv, cardNumber, expmonth, expyear } = this.state
+      const { owner, cvv, cardNumber, expMonth, expYear } = this.state
       try {
           await this.props.createPaymentMutation({
               variables: {
-                owner: "",
-                cvv: "",
-                cardNumber: "",
-                expmonth: "",
-                expyear: ""
+                owner,
+                cvv,
+                cardNumber,
+                expMonth,
+                expYear
               }
           })
       } catch (error) {
@@ -106,8 +107,9 @@ class CreatePayment extends Component {
               onChange={this.handleTextChange}/>
               <input name="cardNumber" className="input" type="number" placeholder="Card Number"
               onChange={this.handleTextChange}/>
-              <select className="expDate" id="expmonth"
+              <select className="expDate" id="expMonth"
                 onChange={this.getExpMonth}>
+                <option defaultValue>Month</option>
                 <option value="0">January</option>
                 <option value="1">February</option>
                 <option value="2">March</option>
@@ -121,7 +123,7 @@ class CreatePayment extends Component {
                 <option value="10">November</option>
                 <option value="11">December</option>
               </select>
-              <select className="expYear" id="expyear"
+              <select className="expYear" id="expYear"
                 onChange={this.getExpYear}>
                 <option>2025</option>
                 <option>2024</option>
@@ -149,18 +151,18 @@ class CreatePayment extends Component {
 }
 
 const CREATE_PAYMENT_MUTATION = gql`
-mutation CreatePaymentMutation($owner: String!, $cvv: String!, $cardNumber: String!, $expmonth: Expmonth!, $expyear: String!) {
-  createPaymentInfo(
-      owner: $owner,
-      cvv: $cvv,
-      cardNumber: $cardNumber,
-      expMonth: $expmonth,
-      expYear: $expyear
-  ) {
-    id
-    createdAt
-    owner
-  }
+mutation CreatePaymentMutation($owner: String!, $cvv: String!, $cardNumber: String!, $expMonth: Expmonth!, $expYear: String!) {
+    createPaymentInfo(
+        owner: $owner,
+        cvv: $cvv,
+        cardNumber: $cardNumber,
+        expMonth: $expMonth,
+        expYear: $expYear
+    ) {
+        id
+        createdAt
+        owner
+    }
 }
 `
 
