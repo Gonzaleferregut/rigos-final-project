@@ -45,9 +45,9 @@ class CreatePayment extends Component {
       })
   }
 
-  handleSelectChange(key) {
+  handleSelectChange(event) {
     this.setState({
-        expmonth: key.toString()
+        expmonth: event.target.value
     })
   }
 
@@ -91,8 +91,7 @@ class CreatePayment extends Component {
               <input name="cardNumber" className="input" type="number" placeholder="Card Number"
               onChange={this.handleTextChange}/>
               <select className="expDate"
-              onChange={(event,key) =>
-                this.handleSelectChange(key)}>
+              onChange={this.handleSelectChange}>
                 <option defaultValue>Month</option>
                 <option value="0">January</option>
                 <option value="1">February</option>
@@ -135,8 +134,8 @@ class CreatePayment extends Component {
 }
 
 const CREATE_PAYMENT_MUTATION = gql`
-mutation CreatePaymentMutation($owner: String!, $cvv: String!, $cardNumber: String!, $expmonth: Expmonth!, $expyear: Expyear!) {
-    createPayment(
+mutation CreatePaymentMutation($owner: String!, $cvv: String!, $cardNumber: String!, $expmonth: Expmonth!, $expyear: String!) {
+    createPaymentInfo(
         owner: $owner,
         cvv: $cvv,
         cardNumber: $cardNumber,
