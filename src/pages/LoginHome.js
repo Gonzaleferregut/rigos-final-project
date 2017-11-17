@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import LoginHeader from '../components/login-Header'
+import LoginHeader from '../components/login-header'
 import LoginTabs from '../components/logintabs'
 import Quote from '../components/quote-generator'
 import Footer from '../components/footer'
