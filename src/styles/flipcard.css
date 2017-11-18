@@ -31,7 +31,7 @@
   height: 100%;
   border-radius: 5px;
   backface-visibility: hidden;
-  background-color: red;
+  background-color: lightgreen;
   color: black;
   transform: rotateY(180deg);
 }
@@ -39,6 +39,3 @@
   display: flex;
   justify-content: center;
 }
-/*.faces {
-  backface-visibility: hidden;
-}*/

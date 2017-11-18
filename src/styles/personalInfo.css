@@ -9,3 +9,13 @@
   display: flex;
   justify-content: flex-end;
 }
+.textfield {
+  margin: 15px;
+}
+
+/*
+where does this class go in component
+*/
+/*.rotate {
+  transform: rotateY(180deg);
+}*/

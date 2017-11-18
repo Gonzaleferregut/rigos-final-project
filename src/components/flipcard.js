@@ -1,15 +1,30 @@
 import React, { Component } from 'react'
 import '../styles/flipcard.css'
 
-
-
 export default class FlipCard extends Component {
   render() {
     return(
       <div className="maincontainer">
-        <div className="thecard faces">
-          <div className="thefront faces"><p>hello friend</p><p>what is up</p><p>why does it not work on the other page</p></div>
-          <div className="theback faces"><p>Why does this work</p></div>
+        <div className="thecard">
+          <div className="thefront">
+            <input type="button" value="submit"/>
+            <input type="button" value="submit"/>
+            <h1>hello</h1>
+            <p>say hello</p>
+            <input type="button" value="submit"/>
+            <input type="button" value="submit"/>
+            <input type="button" value="submit"/>
+          </div>
+          <div className="theback">
+            <h1>hello</h1>
+            <p>say hello</p>
+            <h1>hello</h1>
+            <p>say hello</p>
+            <h1>hello</h1>
+            <p>say hello</p>
+            <h1>hello</h1>
+            <p>say hello</p>
+          </div>
         </div>
       </div>
     )
