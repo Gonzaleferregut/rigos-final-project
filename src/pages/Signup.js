@@ -123,6 +123,7 @@ class CreateUser extends Component {
                 <input className="reset" type="reset" />
               </div>
             </form>
+            //dialog not working
             <Dialog
                 title="Thank You for setting up your account"
                 actions={actions}

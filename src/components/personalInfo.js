@@ -4,7 +4,6 @@ import gql from 'graphql-tag'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
 import { black800, orange500 } from 'material-ui/styles/colors'
-// import axios from 'axios'
 import '../styles/flipcard.css'
 import '../styles/personalInfo.css'
 
@@ -32,9 +31,17 @@ class PersonalInfo extends Component {
       parentAddress: "",
       parentPhoneNumber: "",
       teacherEmail: "",
+      isShowing: false,
     }
     this.handleTextChange = this.handleTextChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.toggleIsShowing = this.toggleIsShowing.bind(this)
+  }
+
+  toggleIsShowing = () => {
+    this.setState(prevState => ({
+      isShowing: ! prevState.isShowing
+    }));
   }
 
   handleTextChange = (event) => {
@@ -51,17 +58,7 @@ class PersonalInfo extends Component {
     console.log(this.state)
     this._personalInfo()
     document.querySelector("form").reset()
-    this.flip180()
-  }
-
-// flips the card 180 on y axis onSubmit
-  flip180(event) {
-    event.document.getElementById('thecard').setAttribute("class", "rotate");
-  }
-// createAttribute
-// flips the card 180 back to front of card to edit onClick
-  flipback180(event) {
-    event.document.getElementById('thecard').removeAttr("class", "rotate");
+    this.toggleIsShowing()
   }
 
   _personalInfo = async () => {
@@ -82,12 +79,11 @@ class PersonalInfo extends Component {
     }
   }
 
-  // document.querySelector("form").reset(); // empty out the form after the dialog closes
-
   render() {
     return(
       <div className="maincontainer">
-        <div  id="thecard" className="thecard">
+        <div className="thecard"
+        style={{transform: this.state.isShowing ? "rotateY(180deg)" : "none"}}>
           <div className="thefront">
             <form autoComplete="on" className="personal-form"  onSubmit={this.handleSubmit}>
               <div className="student-info">
@@ -155,10 +151,10 @@ class PersonalInfo extends Component {
               <p>Parent Name:  {this.state.parentName}</p>
               <p>Parent Email:  {this.state.parentEmail}</p>
               <p>Parent Address:  {this.state.parentAddress}</p>
-              <p>Parent Phone Number:  {this.state.parentPhoneNumber}</p>
+              <p>Parent Phone:  {this.state.parentPhoneNumber}</p>
               <p>Teacher Email:  {this.state.teacherEmail}</p>
               <RaisedButton label="Edit" type="submit"
-              onClick={this.flipback180} />
+              onClick={this.toggleIsShowing} />
             </div>
           </div>
         </div>
@@ -180,6 +176,11 @@ mutation CreatePersonalInfoMutation($studentName: String!, $parentName: String!,
       id
       createdAt
       studentName
+      parentName
+      parentEmail
+      parentAddress
+      parentPhoneNumber
+      teacherEmail
   }
 }
 `
