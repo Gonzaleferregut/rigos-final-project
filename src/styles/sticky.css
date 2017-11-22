@@ -35,18 +35,24 @@ a {
   height: 15px;
 }
 .sticky1 {
-  /*transform: rotate(-5deg);*/
+  transform: rotate(-5deg);
   box-shadow: -1px 3px 10px gray;
 }
 .sticky2 {
   box-shadow: 0 3px 10px gray;
+  position: relative;
+  bottom: 15px;
 }
 .sticky3 {
-  /*transform: rotate(5deg);*/
+  transform: rotate(5deg);
   box-shadow: 1px 3px 10px gray;
 }
 .sticky4 {
   margin-bottom: 23px;
+}
+ol {
+  padding-left: 30px;
+  padding-right: 20px;
 }
 ol li {
   position: relative;
