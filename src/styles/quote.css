@@ -1,4 +1,4 @@
-.quote {
+.quote-contain {
   height: auto;
   border: 2px black solid;
   border-radius: 5px;
@@ -8,20 +8,33 @@
   padding: 10px;
   color: white;
   text-shadow: 1px 1px black;
-  font-size: 28px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
   position: relative;
 }
-.quote > p {
-  align-self: center;
+.quote {
+  font-size: 24px;
+  margin: 0;
+  width: 70%;
+}
+.author {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  margin: 0;
+  width: 70%;
 }
 
 @media only screen and (max-width: 400px) {
   .qqq {
     width: 100%;
   }
-  .quote p {
+  .quote > p {
     font-size: 16px;
+  }
+  .author {
+    font-size: 12px;
   }
 }

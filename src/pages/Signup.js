@@ -71,10 +71,6 @@ class CreateUser extends Component {
     })
   }
 
-  state = {
-    open: false,
-  };
-
   handleOpen = () => {
     this.setState({ open: true });
   };
@@ -96,7 +92,8 @@ class CreateUser extends Component {
 
     return(
       <MuiThemeProvider>
-      <LinkHeader />
+      <div className="container">
+        <LinkHeader />
         <div className="contain">
           <div className="logIn">
             <form autoComplete="on" onSubmit={this._signUpUser}>
@@ -123,7 +120,6 @@ class CreateUser extends Component {
                 <input className="reset" type="reset" />
               </div>
             </form>
-            //dialog not working
             <Dialog
                 title="Thank You for setting up your account"
                 actions={actions}
@@ -134,6 +130,7 @@ class CreateUser extends Component {
             </Dialog>
           </div>
         </div>
+      </div>
       </MuiThemeProvider>
     )
   }

@@ -1,24 +1,41 @@
 import React, { Component } from 'react'
-// import axios from 'axios'
+import axios from 'axios'
 import '../styles/quote.css'
 
-// axios.get(`http://quotes.rest/qod/json`)
-//   .then(res => {
-//     response.send(res.data.contents.quotes[0].quote)
-//   })
-
 export default class Quote extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+        quote: '',
+        author: ''
+    }
+  }
+
+  componentDidMount() {
+    axios.get(`http://quotes.rest/qod/?category=students`)
+    .then(res => {
+      this.setState({
+        quote: res.data.contents.quotes[0].quote,
+        author: res.data.contents.quotes[0].author
+      })
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  }
+
   render() {
     return(
       <div>
         <hr />
-        <div>
-          <div className="quote">
-            <p>
-              "Learning is not attained by chance, <br/>it must be sought for with ardor and <br/>diligence." Abigail Adams
+          <div className="quote-contain">
+            <p className="quote">
+              {this.state.quote}
+            </p>
+            <p className="author">
+              {this.state.author}
             </p>
           </div>
-        </div>
       </div>
     )
   }

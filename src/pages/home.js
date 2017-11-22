@@ -13,8 +13,6 @@ import Quote from '../components/quote-generator'
 import Footer from '../components/footer'
 import LoggedIn from '../pages/LoginHome'
 
-import FlipCard from '../components/flipcard'
-
 class Home extends Component {
 
   _isLoggedIn = () => {
@@ -51,9 +49,6 @@ class Home extends Component {
             <Sticky3 />
           </div>
           <Services />
-          <div className="flipcards">
-            <FlipCard />
-          </div>
         </div>
         <About />
         <div className="container">

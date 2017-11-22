@@ -64,7 +64,7 @@ class PersonalInfo extends Component {
   _personalInfo = async () => {
     const { studentName, parentName, parentEmail, parentAddress, parentPhoneNumber, teacherEmail } = this.state
     try {
-      await this.props.createPersonalInfoMutation({
+      await this.props.createPersonalInfoAndUser({
         variables: {
           studentName,
           parentName,
@@ -78,6 +78,16 @@ class PersonalInfo extends Component {
       console.log(error)
     }
   }
+
+  // _isLoggedIn = () => {
+  //   return this.props.loggedInUserQuery.loggedInUser && this.props.loggedInUserQuery.loggedInUser.id !== null
+  // }
+  //
+  // if(this._isLoggedIn()) {
+  //   return createPersonalInfo
+  // } else {
+  //   return
+  // }
 
   render() {
     return(
@@ -122,7 +132,7 @@ class PersonalInfo extends Component {
                   onChange={this.handleTextChange}/>
                 </div>
                 <div>
-                  <TextField className="textfield" name="parentNumber" required type="number"
+                  <TextField className="textfield" name="parentPhoneNumber" required type="number"
                   hintText="Parents Number"
                   placeholder="Parents Number"
                   hintStyle={styles.errorStyle}
@@ -164,25 +174,53 @@ class PersonalInfo extends Component {
 }
 
 const CREATE_PROFILE_MUTATION = gql`
-mutation CreatePersonalInfoMutation($studentName: String!, $parentName: String!, $parentEmail: String!, $parentAddress: String!, $parentPhoneNumber: String!, $teacherEmail: String!) {
+mutation createPersonalInfoAndUser($studentName: String!, $parentName: String!, $parentEmail: String!, $parentAddress: String!, $parentPhoneNumber: String!, $teacherEmail: String!) {
   createPersonalInfo(
-      studentName: $studentName,
-      parentName: $parentName,
-      parentEmail: $parentEmail,
-      parentAddress: $parentAddress,
-      parentPhoneNumber: $parentPhoneNumber,
-      teacherEmail: $teacherEmail
+    studentName: $studentName,
+    parentName: $parentName,
+    parentEmail: $parentEmail,
+    parentAddress: $parentAddress,
+    parentPhoneNumber: $parentPhoneNumber,
+    teacherEmail: $teacherEmail,
+    user: {
+      email: $email,
+      password: $password
+    }
   ) {
-      id
-      createdAt
-      studentName
-      parentName
-      parentEmail
-      parentAddress
-      parentPhoneNumber
-      teacherEmail
+    id
+    user {
+      personalInfo {
+        id
+        studentName
+        parentName
+        parentEmail
+        parentAddress
+        parentPhoneNumber
+        teacherEmail
+      }
+    }
   }
 }
 `
+// mutation CreatePersonalInfoMutation($studentName: String!, $parentName: String!, $parentEmail: String!, $parentAddress: String!, $parentPhoneNumber: String!, $teacherEmail: String!) {
+//   createPersonalInfo(
+//       studentName: $studentName,
+//       parentName: $parentName,
+//       parentEmail: $parentEmail,
+//       parentAddress: $parentAddress,
+//       parentPhoneNumber: $parentPhoneNumber,
+//       teacherEmail: $teacherEmail
+//   ) {
+//       id
+//       createdAt
+//       studentName
+//       parentName
+//       parentEmail
+//       parentAddress
+//       parentPhoneNumber
+//       teacherEmail
+//   }
+// }
+
 
 export default graphql(CREATE_PROFILE_MUTATION, { name: 'createPersonalInfoMutation' })(PersonalInfo)
