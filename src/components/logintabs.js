@@ -33,14 +33,14 @@ export default class LoginTabs extends Component{
       <div className="tabs">
         <Tabs value={this.state.value}
           onChange={this.handleChange}>
-          <Tab label="Personal Information" value="a">
+          <Tab label="Profile" value="a">
             <div>
               <h2 style={styles.headline}>Personal Information</h2>
               <PersonalInfo />
             </div>
           </Tab>
 
-          <Tab label="Schelduling" value="b">
+          <Tab label="Scheldule" value="b">
             <div>
               <h2 style={styles.headline}>Availability</h2>
               <div className="calendar-container">
@@ -49,7 +49,7 @@ export default class LoginTabs extends Component{
             </div>
           </Tab>
 
-          <Tab label="Messages" value="c">
+          <Tab label="Message" value="c">
             <div>
               <Messages/>
             </div>

@@ -31,8 +31,8 @@
   .qqq {
     width: 100%;
   }
-  .quote > p {
-    font-size: 16px;
+  .quote {
+    font-size: 15px;
   }
   .author {
     font-size: 12px;

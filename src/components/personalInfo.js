@@ -163,8 +163,10 @@ class PersonalInfo extends Component {
               <p>Parent Address:  {this.state.parentAddress}</p>
               <p>Parent Phone:  {this.state.parentPhoneNumber}</p>
               <p>Teacher Email:  {this.state.teacherEmail}</p>
-              <RaisedButton label="Edit" type="submit"
-              onClick={this.toggleIsShowing} />
+              <div className="BTN">
+                <RaisedButton label="Edit" type="submit"
+                onClick={this.toggleIsShowing}/>
+              </div>
             </div>
           </div>
         </div>

@@ -12,10 +12,14 @@
 .textfield {
   margin: 15px;
 }
-
-/*
-where does this class go in component
-*/
-/*.rotate {
-  transform: rotateY(180deg);
-}*/
+@media only screen and (max-width: 400px) {
+  .maincontainer {
+    height: 550px;
+  }
+  /*.theback {
+    height: auto;
+  }*/
+  .student-info {
+    flex-direction: column;
+  }
+}

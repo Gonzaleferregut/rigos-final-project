@@ -11,6 +11,8 @@ import Services from '../components/services'
 import About from '../components/about-me'
 import Quote from '../components/quote-generator'
 import Footer from '../components/footer'
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+// import LinearProgress from 'material-ui/LinearProgress';
 import LoggedIn from '../pages/LoginHome'
 
 class Home extends Component {
@@ -21,7 +23,11 @@ class Home extends Component {
 
   render() {
     if(this.props.loggedInUserQuery.loading) {
-      return (<div>Loading</div>)
+      return (
+        <div>
+          Loading
+        </div>
+      )
     }
 
     if(this._isLoggedIn()) {
@@ -45,8 +51,8 @@ class Home extends Component {
           <Carousel />
           <div className="sticky-contain">
             <Sticky1 />
-            <Sticky2 />
             <Sticky3 />
+            <Sticky2 />
           </div>
           <Services />
         </div>
@@ -72,3 +78,9 @@ export default graphql(LOGGED_IN_USER_QUERY, {
   name: 'loggedInUserQuery',
   options: { fetchPolicy: 'network-only' }
 })(withRouter(Home))
+
+
+
+// const LinearProgressExampleSimple = () => (
+//   <LinearProgress mode="indeterminate" />
+// );

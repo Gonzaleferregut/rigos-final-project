@@ -4,7 +4,7 @@ import '../styles/sticky.css'
 export default class Sticky3 extends Component {
   render() {
     return(
-      <div className="sticky3 sticky">
+      <div className="sticky3 sticky animated fadeInUp">
         <div className="sticky-top"></div>
         <p>SCS</p>
         <ol>

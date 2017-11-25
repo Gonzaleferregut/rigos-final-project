@@ -33,8 +33,10 @@
 }
 
 @media only screen and (max-width: 400px) {
+  .about-container {
+    width: 100%;
+  }
   .about_me {
-    margin-left: 0;
     width: 100%;
   }
 }
