@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// import { graphql } from 'react-apollo'
+// import gql from 'graphql-tag'
 import '../styles/messenger.css';
 
 export default class Messages extends Component {
@@ -8,6 +10,7 @@ export default class Messages extends Component {
       message: ""
     }
     this.handleTextChange=this.handleTextChange.bind(this)
+    this.handleClick=this.handleClick.bind(this)
   }
 
   handleTextChange = (event) => {
@@ -18,15 +21,25 @@ export default class Messages extends Component {
     console.log(this.state)
   }
 
+  handleClick = (event) => {
+    event.preventDefault()
+
+  }
+
   render() {
     return(
       <div className="message-contain">
         <div className="inputs">
           <input className="inputField" name="message" type="text"
           onChange={this.handleTextChange}/>
-          <input className="post-btn" type="submit" value="Post"/>
+          <input className="post-btn" type="submit" value="Post"
+          onClick={this.handleClick}/>
         </div>
       </div>
     )
   }
 }
+
+// const CREATE_MESSAGE_MUTATION = gql`
+//   mutation
+// `

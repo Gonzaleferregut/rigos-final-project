@@ -16,12 +16,23 @@
   margin-bottom: 3px;
 }
 .inputField {
-  width: 90%;
-  border: 1px solid black;
+  width: 85%;
   border-radius: 5px;
+  justify-content: space-around;
 }
 .post-btn {
-  border: 1px solid black;
   border-radius: 5px;
   background-color: skyblue;
+}
+
+@media only screen and (max-width: 400px) {
+  .message-contain {
+    width: 100%;
+  }
+  .inputField {
+    width: 85%;
+  }
+  .inputs {
+    justify-content: space-around;
+  }
 }
