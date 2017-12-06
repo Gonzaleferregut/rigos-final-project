@@ -79,16 +79,6 @@ class PersonalInfo extends Component {
     }
   }
 
-  // _isLoggedIn = () => {
-  //   return this.props.loggedInUserQuery.loggedInUser && this.props.loggedInUserQuery.loggedInUser.id !== null
-  // }
-  //
-  // if(this._isLoggedIn()) {
-  //   return createPersonalInfo
-  // } else {
-  //   return
-  // }
-
   render() {
     return(
       <div className="maincontainer">
@@ -204,25 +194,5 @@ mutation createPersonalInfoAndUser($studentName: String!, $parentName: String!, 
   }
 }
 `
-// mutation CreatePersonalInfoMutation($studentName: String!, $parentName: String!, $parentEmail: String!, $parentAddress: String!, $parentPhoneNumber: String!, $teacherEmail: String!) {
-//   createPersonalInfo(
-//       studentName: $studentName,
-//       parentName: $parentName,
-//       parentEmail: $parentEmail,
-//       parentAddress: $parentAddress,
-//       parentPhoneNumber: $parentPhoneNumber,
-//       teacherEmail: $teacherEmail
-//   ) {
-//       id
-//       createdAt
-//       studentName
-//       parentName
-//       parentEmail
-//       parentAddress
-//       parentPhoneNumber
-//       teacherEmail
-//   }
-// }
-
 
 export default graphql(CREATE_PROFILE_MUTATION, { name: 'createPersonalInfoMutation' })(PersonalInfo)
